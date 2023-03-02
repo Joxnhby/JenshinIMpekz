@@ -1,0 +1,36 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+}
+
+.nav-bar .logo {
+    width: 100px;
+}
+
+.nav-bar .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-bar .menu .header-menu a{
+    padding: 20px 10px;
+}
+
+.nav-bar .menu .user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
