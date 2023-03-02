@@ -1,4 +1,28 @@
+@font-face {
+    font-family: hy-wen-hei;
+    src: url(/assets/font/hy-wen-hei.ttf);
+}
 
+@font-face {
+    font-family: tahoma;
+    src: url(/assets/font/tahoma-regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: tahoma;
+    src: url(/assets/font/tahoma-bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --white: #ffffff;
+    --deep-blue: #112436;
+    --light-blue: #C4FDFF;
+    --sumure-green: #22EF10;
+    --liyue-orange: #E78025;
+    --inazuma-purple: #6831DB;
+}
 
 * {
     margin: 0px;
@@ -6,31 +30,57 @@
 }
 
 .nav-bar {
+    top: 0px;
+    position: fixed;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
+    background-image: url(/assets/header-background.jpg);
+    opacity: 0.98;
 }
 
 .nav-bar .logo {
-    width: 100px;
+    width: 130px;
+    margin: 0px 30px;
 }
 
 .nav-bar .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin: 0px 20px;
 }
 
 .nav-bar .menu .header-menu a{
-    padding: 20px 10px;
+    padding: 20px 20px;
+    font-family: hy-wen-hei;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-bar .menu .header-menu a:hover{
+    color: var(--liyue-orange);
 }
 
 .nav-bar .menu .user-profile {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px 40px;
+}
+
+.nav-bar .menu .user-profile img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-bar .menu .user-profile h3 {
+    color: var(--white);
+    font-family: tahoma;
+    font-weight: normal;
 }
