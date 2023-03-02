@@ -29,7 +29,7 @@
     object-fit: cover;
 }
 
-.map-container h2{
+.map-container h1{
     font-family: hy-wen-hei;
     text-align: center;
     
@@ -51,9 +51,11 @@
 .news-section{
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+    width: 80%;
+    height: 500px;
+    background-color: #000;
+    margin-left: 10%;
+    opacity: 0.60;
 }
 
 .news-container{
