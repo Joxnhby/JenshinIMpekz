@@ -94,11 +94,13 @@
 }
 
 .nav-bar .menu .user-profile-logged {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
+    padding: 22.5px 40px;
     cursor: pointer;
+    /* display: none; */
 }
 
 .nav-bar .menu .user-profile-logged:hover {
@@ -110,7 +112,7 @@
 }
 
 .nav-bar .menu .user-profile-logged img {
-    width: 40px;
+    width: 35px;
     border-radius: 50%;
 }
 
