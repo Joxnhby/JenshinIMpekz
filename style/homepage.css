@@ -94,17 +94,17 @@ body{
     text-align: center;
     font-size: 32px;
     color: var(--white);
-    margin-top: -120px;
+    transform: translateY(-120px);
     z-index: 1;
     text-shadow: 2px 2px 0px var(--deep-blue);
 }
 
 .title{
-    font-size: 80px;
-    text-align: center;
-    font-family: hy-wen-hei;
-    margin-top: 100px;
-    margin-bottom: 80px;
+        font-size: 80px;
+        text-align: center;
+        font-family: hy-wen-hei;
+        margin-top: 100px;
+        margin-bottom: 80px;
 }
 
 .news{

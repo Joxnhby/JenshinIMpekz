@@ -1,0 +1,169 @@
+body {
+    margin-top: 75px;
+}
+
+.character-section {
+    width: 100%;
+    height: calc(100% - 75px);
+    position: relative;
+    overflow: hidden;
+}
+
+.character-section .character-background {
+    width: 100%;
+    height: calc(100% - 75px);
+}
+
+.character-section .character-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scenery-bg {
+    filter: blur(5px);
+    transform: scale(1.2);
+}
+
+.character-section .character-background .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.character-section .character-background .content img {
+    height: 100%;
+    transform: translateX(200px);
+}
+
+.character-section .character-background .content .details {
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-60%);
+
+}
+
+.character-section .character-background .content hr {
+    border: 2px solid var(--light-yellow);
+    width: 100px;
+}
+
+.character-section .character-background .content h2 {
+    font-family: hy-wen-hei;
+    font-size: 54px;
+    color: var(--white);
+    margin: 30px 0px;
+    text-shadow: 3px 3px 0px var(--deep-blue);
+}
+
+.character-section .character-background .content p {
+    text-align: left;
+    font-family: tahoma;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--white);
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.character-section .characters-list {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-section .characters-list .character {
+    width: 120px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.character-section .characters-list .character:hover {
+    border: 2px solid var(--white);
+}
+
+.character-section .characters-list .character:hover h3 {
+    background-color: var(--white);
+    color: var(--medium-blue);
+}
+
+.character-section .characters-list .character img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.character-section .characters-list .character h3 {
+    font-family: tahoma;
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 40px;
+    background-color: var(--deep-blue);
+}
+
+.character-section .side-nav {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%);
+    float: left;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0px;
+}
+
+.character-section .side-nav a {
+    text-align: left;
+    text-decoration: none;
+    font-family: tahoma;
+    padding: 20px 70px;
+    color: var(--white);
+    margin: 0px;
+}
+
+.character-section .side-nav a:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.active-side-nav {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.active-character {
+    width: 120px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+
+.character-section .characters-list .active-character h3 {
+    font-family: tahoma;
+    color: var(--deep-blue);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 40px;
+    background-color: var(--white);
+}
