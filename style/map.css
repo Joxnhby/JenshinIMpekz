@@ -1,38 +1,52 @@
+body{
+   background-image: url(/Assets/homepage/home-page-background.webp);
+}
+
 .teyvat{
     font-size: 80px;
     text-align: center;
     font-family: hy-wen-hei;
     font-weight: lighter;
-    padding: 250px 0px 80px 0px;
+    margin: 80px 0px 50px 0px;
     color: white;
 }
 
 .map-background {
     width: 100%;
-    height: 800px;
+    height: 100%;
     position: relative;
+    margin-bottom: -5px;
 }
 
 .map-background .details {
     position: absolute;
     top: 50%;
     width: 100%;
+    height: auto;
     transform: translateY(-50%);
+    text-align: center;
+}
+
+.map-background .details .logo-region {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    filter: brightness(1.2);
 }
 
 .map-background img{
     width: 100%;
-    background-size: cover;
+    height: 100%;
     filter: brightness(0.7);
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    z-index: -10;
+    object-fit: cover;
 }
 
 pre{
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     line-height: 1.7em;
-    /* emang belum keliatan karena background masi ngasal */
 }
 
 .map-title{
@@ -53,6 +67,6 @@ pre{
 
 .map-background a:hover{
     color:var(--light-yellow);
-    scale: 1.2;
+    font-size: 24px;
     transition-duration: 0.5s;
 }
