@@ -7,12 +7,24 @@
     color: white;
 }
 
-.map-background img{
-    margin: 0px 0px 0px 0px;
+.map-background {
     width: 100%;
     height: 800px;
+    position: relative;
+}
+
+.map-background .details {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.map-background img{
+    width: 100%;
     background-size: cover;
-    /* object-fit: cover; */
+    filter: brightness(0.7);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
 }
 
 pre{
@@ -20,20 +32,15 @@ pre{
     font-size: 16px;
     text-align: center;
     line-height: 1.7em;
-    margin: -800px 0px 0px 0px;
     /* emang belum keliatan karena background masi ngasal */
-}
-
-pre:hover{
-
 }
 
 .map-title{
     font-size: 50px;
     text-align: center;
     font-family: hy-wen-hei;
-    padding: 250px 0px 40px 0px;
     color: white;
+    margin: 0px 0px 40px 0px;
 }
 
 .map-background a{
@@ -42,8 +49,6 @@ pre:hover{
     display: flex;
     justify-content: center;
     text-decoration: none;
-    margin: 30px 0px 0px 0px;
-    
 }
 
 .map-background a:hover{
