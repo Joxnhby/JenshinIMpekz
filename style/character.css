@@ -12,11 +12,12 @@ body {
 .character-section .character-background {
     width: 100%;
     height: calc(100% - 75px);
+    position: relative;
 }
 
 .character-section .character-background img {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 75px);
     object-fit: cover;
 }
 
@@ -48,12 +49,12 @@ body {
 
 }
 
-.character-section .character-background .content hr {
+.character-section .character-background .content .details hr {
     border: 2px solid var(--light-yellow);
     width: 100px;
 }
 
-.character-section .character-background .content h2 {
+.character-section .character-background .content .details h2 {
     font-family: hy-wen-hei;
     font-size: 54px;
     color: var(--white);
@@ -61,7 +62,7 @@ body {
     text-shadow: 3px 3px 0px var(--deep-blue);
 }
 
-.character-section .character-background .content p {
+.character-section .character-background .content .details p {
     text-align: left;
     font-family: tahoma;
     font-size: 16px;
@@ -137,9 +138,11 @@ body {
     padding: 20px 70px;
     color: var(--white);
     margin: 0px;
+    transition: 0.3s all ease-in-out;
 }
 
 .character-section .side-nav a:hover {
+    padding: 20px 90px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 

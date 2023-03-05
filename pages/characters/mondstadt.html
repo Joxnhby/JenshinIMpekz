@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/navigation-bar.css">
     <link rel="stylesheet" href="/style/footer.css"> 
-    <link rel="stylesheet" href="/style/character.css"> 
+    <link rel="stylesheet" href="/style/character.css">
+    <script src="/script/character.js" defer=""></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -31,41 +32,41 @@
 
     <div class="character-section">
         <div class="character-background">
-            <img src="/assets/mondstadt/dawn-winery.png" class="scenery-bg">
+            <img src="/assets/mondstadt/dawn-winery.png" class="scenery-bg" id="scenery-bg">
             <div class="content">
-                <img src="/assets/character/character-monstad/jean.png">
+                <img src="/assets/character/character-monstad/jean.png" id="char-bg">
                 <div class="details">
                     <hr>
-                    <h2>JEAN</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget 
+                    <h2 id="char-name">JEAN</h2>
+                    <p id="char-details">As the Acting Grand Master of the Knights, Jean has always been devoted to her duties and maintaining peace in Mondstadt and she will guard Mondstadt with her life as always.
                     </p>
                 </div>
             </div>
         </div>
         <div class="side-nav">
-            <a href="" class="active-side-nav">Monstadt</a>
+            <a href="" class="active-side-nav">Mondstadt</a>
             <a href="">Liyue</a>
             <a href="">Inazuma</a>
             <a href="">Sumeru</a>
         </div>
         <div class="characters-list">
-                <div class="character">
+                <div class="character" id="char-1">
                     <img src="/assets/character/character-monstad/venti-logo.png">
                     <h3>Venti</h3>
                 </div>
-                <div class="active-character">
+                <div class="active-character" id="char-2">
                     <img src="/assets/character/character-monstad/jean-logo.png">
                     <h3>Jean</h3>
                 </div>
-                <div class="character">
+                <div class="character" id="char-3">
                     <img src="/assets/character/character-monstad/lisa-logo.png">
                     <h3>Lisa</h3>
                 </div>
-                <div class="character">
+                <div class="character" id="char-4">
                     <img src="/assets/character/character-monstad/kaeya-logo.png">
                     <h3>Kaeya</h3>
                 </div>
-                <div class="character">
+                <div class="character" id="char-5">
                     <img src="/assets/character/character-monstad/amber-logo.png">
                     <h3>Amber</h3>
                 </div>
