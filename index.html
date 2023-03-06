@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="shortcut icon" href="/assets/image/paimon.png" type="image/png">
+    <script src="script/news.js" defer=""></script>
 </head>
 <body>
     <div class="nav-bar">
@@ -65,9 +66,12 @@
     <div class = "news">
         <h1>News</h1>
         <div class="news-container">
-            <div class="slider-image">
-                <a href="https://youtu.be/URDSFmZOX4Q" target="_blank"><img src="/Assets/homepage/news/news-recent-1.jpg"></a>
-                
+            <div class="slider-image" id="slider-image">
+                <!-- <a href="https://youtu.be/URDSFmZOX4Q"><img src="/assets/homepage/news/news-recent-1.jpg"></a> -->
+                <div class="button-container">
+                    <i class="fa-solid fa-circle-chevron-left" id="news-left-btn"></i>
+                    <i class="fa-solid fa-circle-chevron-right" id="news-next-btn"></i>
+                </div>
             </div>
             <div class="news-material">
                 <h2>Latest</h2>
