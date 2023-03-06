@@ -79,14 +79,23 @@ body {
     text-shadow: 3px 3px 0px var(--deep-blue);
 }
 
-.character-section .character-background .content .details p {
+.character-section .character-background .content .details .contain {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px 25px;
+    overflow-y: scroll;
+    height: 130px;
+    scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-section .character-background .content .details .contain p {
     text-align: left;
     font-family: tahoma;
     font-size: 16px;
     line-height: 25px;
     color: var(--white);
-    padding: 25px;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .character-section .characters-list {
@@ -159,6 +168,7 @@ body {
     color: var(--white);
     margin: 0px;
     transition: 0.3s all ease-in-out;
+    text-shadow: 1px 1px 0px var(--deep-blue);
 }
 
 .character-section .side-nav p:hover {

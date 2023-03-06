@@ -57,7 +57,7 @@ pre{
     margin: 0px 0px 40px 0px;
 }
 
-.map-background a{
+.map-background h3{
     color: white;
     font-size: 20px;
     display: flex;
@@ -65,8 +65,9 @@ pre{
     text-decoration: none;
 }
 
-.map-background a:hover{
+.map-background h3:hover{
     color:var(--light-yellow);
+    margin-top: -6px;
     font-size: 24px;
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 }
