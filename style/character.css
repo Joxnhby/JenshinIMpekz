@@ -131,7 +131,7 @@ body {
     margin: 70px 0px;
 }
 
-.character-section .side-nav a {
+.character-section .side-nav p {
     text-align: left;
     text-decoration: none;
     font-family: tahoma;
@@ -141,12 +141,12 @@ body {
     transition: 0.3s all ease-in-out;
 }
 
-.character-section .side-nav a:hover {
+.character-section .side-nav p:hover {
     padding: 20px 90px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
-.active-side-nav {
+#active-side-nav {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
