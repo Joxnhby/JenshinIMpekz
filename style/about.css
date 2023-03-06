@@ -78,6 +78,7 @@ body{
 .game-features .details h2{
     color: #654F42;
     font-size: 30px;
+    width: 300px;
 }
 
 .game-features .details pre{

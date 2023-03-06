@@ -8,7 +8,6 @@ body{
     position: relative;
     width: 100%;
     height: auto;
-    /* z-index: 1; */
 }
 
 .top-photo img {
@@ -17,23 +16,25 @@ body{
 }
 
 .top-photo .title {
+    width: 500px;
     position: absolute;
     top: 50%;
-    transform: translateY(-250%);
+    transform: translateY(-120%);
     text-align: left;
-    margin: 0px 70px;
+    margin: 0px 100px;
 }
 
 .top-photo .title h1 {
-    font-family: oxalis;
-    color: var(--deep-blue);
+    font-family: hy-wen-hei;
+    color: var(--white);
     position: relative;
-    text-transform: uppercase;
-    font-size: 80px;
+    font-size: 60px;
+    text-shadow: 5px 5px 30px #2d8dd5;
 }
 
 .top-photo .title img {
-    width: 300px;
+    width: 200px;
+    margin-bottom: 80px;
 }
 
 .map{
@@ -94,7 +95,7 @@ body{
     text-align: center;
     font-size: 32px;
     color: var(--white);
-    transform: translateY(-120px);
+    transform: translateY(-150px);
     z-index: 1;
     text-shadow: 2px 2px 0px var(--deep-blue);
 }
@@ -109,7 +110,7 @@ body{
 
 .news{
     width: 100%;
-    height: 1000px;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,40 +125,49 @@ body{
     margin-bottom: 60px;
 }
 
-.news-section{
+.news-container  {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 90%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.news-container img {
-
+.news-container .slider-image {
     width: 50%;
     height: 100%;
-    object-fit: cover;
-}
-
-.news-container{
+    overflow: hidden;
     display: flex;
-    width: 100%;
+    flex-direction: row;
 }
 
-.news-container h2 {
-    font-family: tahoma;
-    color: var(--light-yellow);
-    margin-bottom: 40px;
-    font-size: 26px;
+.news-container .slider-image a {
+    width: 100%;
+    height: 100%;
+}
+
+.news-container .slider-image a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .news-material {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.news-material h2 {
+    font-family: tahoma;
+    color: var(--light-yellow);
+    margin-bottom: 30px;
+    font-size: 26px;
 }
 
 .news-material a{
-    padding: 20px 10px;
+    padding: 15px 10px;
     color: white;
     font-size: 16px;
     font-family: tahoma;
@@ -174,9 +184,15 @@ body{
 .news-material a:last-child {
     text-align: right;
     font-size: 20px;
-    margin-left: 85%;
     width: 20px;
     border: none;
+    display: flex;
+    align-items: center;
+    margin-left: 80%;
+}
+
+.news-material a:last-child .fa-plus {
+    margin: 0px 10px;
 }
 
 .news-material a:last-child:hover {

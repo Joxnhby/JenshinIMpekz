@@ -96,7 +96,7 @@ const characters = [
         map: "inazuma"
     },
     {
-        name: "Ayato",
+        name: "Kamisato Ayato",
         story: "Head of the Kamisato Clan and current Commissioner Yashiro. He always has a way to achieve his goals with a very neat and planned. However, not many people know what his true goals are.",
         background: "/assets/inazuma/inazuma-city.jpg",
         photo: "/assets/character/character-inazuma/ayato.png",
@@ -104,7 +104,7 @@ const characters = [
         map: "inazuma"
     },
     {
-        name: "Ayaka",
+        name: "Kamisato Ayaka",
         story: "The daughter of the Kamisato Clan of the Yashiro Commission. Dignified and elegant, wise and tough. Always treat others with sincerity and courtesy. Ayaka is loved by the people of Inazuma and nicknamed Shirasagi Himegimi.",
         background: "/assets/inazuma/inazuma-city.jpg",
         photo: "/assets/character/character-inazuma/ayaka.png",
@@ -112,7 +112,7 @@ const characters = [
         map: "inazuma"
     },
     {
-        name: "Kazuha",
+        name: "Kaedehara Kazuha",
         story: "Wandering samurai from Inazuma, gentle and humble. Behind his young and carefree appearance, there is a lot of bitterness from the past. Although he always looks relaxed, he has his own principles in acting.",
         background: "/assets/inazuma/inazuma-city.jpg",
         photo: "/assets/character/character-inazuma/kazuha.png",
