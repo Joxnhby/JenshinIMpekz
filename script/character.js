@@ -248,6 +248,7 @@ for(let i = 0; i < map.length; i++){
                         character.src = characters[j].photo
                         charname.innerText = characters[j].name
                         details.innerText = characters[j].story
+                        
                     })
                 }   
                 count++;
