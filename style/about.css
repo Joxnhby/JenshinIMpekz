@@ -1,10 +1,11 @@
 body{
     background-image: url(/assets/homepage/home-page-background.webp);
+    margin-top: 75px;
 }
 
 .top-photo{
     width: 100%;
-    height: 900px;
+    height: 100%;
     background-size: cover;
 }
 
@@ -12,7 +13,7 @@ body{
     font-size: 50px;
     text-align: center;
     font-family: hy-wen-hei;
-    margin: 100px 0px 100px 0px;
+    margin: 100px 0px 60px 0px;
     color: var(--medium-blue);
 }
 

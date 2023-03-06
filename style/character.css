@@ -24,6 +24,23 @@ body {
 .scenery-bg {
     filter: blur(5px);
     transform: scale(1.2);
+
+    animation-name: zoom-in-and-out;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes zoom-in-and-out{
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
 }
 
 .character-section .character-background .content{
@@ -116,7 +133,10 @@ body {
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    line-height: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--deep-blue);
 }
 
@@ -146,7 +166,7 @@ body {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
 
-#active-side-nav {
+.active-side-nav {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
@@ -162,11 +182,14 @@ body {
 }
 
 .character-section .characters-list .active-character h3 {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: tahoma;
     color: var(--deep-blue);
     text-align: center;
     font-size: 16px;
     font-style: normal;
-    line-height: 40px;
     background-color: var(--white);
 }
