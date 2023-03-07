@@ -53,7 +53,7 @@
 }
 
 .nav-bar .logo {
-    width: 130px;
+    width: 120px;
     margin: 0px 30px;
 }
 
@@ -82,29 +82,29 @@
 }
 
 .nav-bar .menu .header-menu a:hover{
-    color: var(--light-yellow);
-    background-color: var(--medium-blue);
+    color: var(--white);
+    background-color: var(--inazuma-purple);
 }
 
 .nav-bar .menu .user-profile-non{
     text-decoration: none;
-    display: none;
+    /* display: none; */
 }
 
 .nav-bar .menu .user-profile-non h3{
     margin: 0px 20px;
     padding: 15px 35px;
-    background-color: var(--medium-blue);
+    background-color: var(--inazuma-purple);
     font-family: hy-wen-hei;
     font-size: 18px;
     color: var(--white);
-    border-radius: 5px;
+    border-radius: 3px;
     transition: 0.3s all ease-in-out;
     cursor: pointer;
 }
 
 .nav-bar .menu .user-profile-non h3:hover {
-    opacity: 0.7;
+    background-color: var(--medium-blue);
 }
 
 .nav-bar .menu .user-profile-logged {
@@ -114,16 +114,16 @@
     align-items: center;
     padding: 20px 40px;
     cursor: pointer;
-    /* display: none; */
+    display: none;
     transition: 0.3s all ease-in-out;
 }
 
 .nav-bar .menu .user-profile-logged:hover {
-    background-color: var(--medium-blue);
+    background-color: var(--inazuma-purple);
 }
 
 .nav-bar .menu .user-profile-logged:hover h3 {
-    color: var(--light-yellow)
+    color: var(--white)
 }
 
 .nav-bar .menu .user-profile-logged img {
