@@ -4,20 +4,20 @@ body {
 
 .character-section {
     width: 100%;
-    height: calc(100% - 75px);
+    height: calc(100vh - 75px);
     position: relative;
     overflow: hidden;
 }
 
 .character-section .character-background {
     width: 100%;
-    height: calc(100% - 75px);
+    height: 100vh;
     position: relative;
 }
 
 .character-section .character-background img {
     width: 100%;
-    height: calc(100% - 75px);
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -52,8 +52,10 @@ body {
 }
 
 .character-section .character-background .content img {
+    width: 100%;
     height: 100%;
     transform: translateX(200px);
+    object-fit: contain;
 }
 
 .character-section .character-background .content .details {

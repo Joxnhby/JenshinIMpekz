@@ -18,6 +18,7 @@
     flex-direction: row;
     overflow: hidden;
     background-color: var(--white);
+    margin-top: 75px;
 }
 
 .login-background {
@@ -42,7 +43,7 @@
 }
 
 .title img {
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
@@ -51,6 +52,8 @@
     font-size: 32px;
     color: var(--white);
     text-align: center;
+    text-shadow: 0px 0px 30px black;
+    margin: 30px 0px;
 }
 
 .container {
@@ -77,8 +80,8 @@
     width: 100%;
     padding: 15px 0px;
     margin: 20px 0px;
-    background-color: var(--medium-blue);
-    border: 1.5px solid var(--medium-blue);
+    background-color: var(--inazuma-purple);
+    border: 1.5px solid var(--inazuma-purple);
     border-radius: 3px;
     color: var(--white);
     font-family: tahoma;
@@ -88,7 +91,8 @@
 }
 
 .btn:hover {
-    opacity: 0.8;
+    background-color: var(--medium-blue);
+    border: 1.5px solid var(--medium-blue);
 }
 
 .field {
@@ -116,6 +120,24 @@
     border: 1px solid var(--inazuma-purple);
 }
 
-.error {
+.others {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.others a {
+    font-family: tahoma;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--inazuma-purple);
+    transition: 0.3s all ease-in-out;
+}
+
+.others a:hover {
+    color: var(--medium-blue);
+}
+
+.error input {
     border: 2px solid red;
 }
