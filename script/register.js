@@ -33,6 +33,13 @@ btn.addEventListener("click", (e)=>{
         err.classList.remove("error")
     });
 
+    while (errorHistoryElement.length != 0) {
+        errorHistoryElement.pop()
+    }
+    while (errorHistoryParent.length != 0) {
+        errorHistoryParent.pop()
+    }
+
     fullnameVal = fullname.value
     emailVal = email.value
     ageVal = age.value
@@ -61,11 +68,13 @@ btn.addEventListener("click", (e)=>{
         setError("Password at least 8 characters!", password.parentElement)
     }
 
-    if (agreeVal != true) {
-        setError("You have to agree to continue!", agree.parentElement)
+    if (agreeVal != "true") {
+        setError("You have to agree to continue!", agree.parentElement.parentElement)
     }
 
-    if (errorHistoryElement.length == 0) {
+    console.log(errorHistoryParent[0])
+
+    if (errorHistoryParent.length == 0) {
         window.location.href = "/login.html"
     }
 })
