@@ -61,5 +61,11 @@ btn.addEventListener("click", (e)=>{
         setError("Password at least 8 characters!", password.parentElement)
     }
 
-    if ()
+    if (agreeVal != true) {
+        setError("You have to agree to continue!", agree.parentElement)
+    }
+
+    if (errorHistoryElement.length == 0) {
+        window.location.href = "/login.html"
+    }
 })

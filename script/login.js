@@ -25,7 +25,7 @@ btn.addEventListener("click", (e)=>{
         if (user.username == usernameVal && user.password == passwordVal) {
             console.log("success")
             loggedusername.innerHTML = user.username
-            window.location.href = "index.html"
+            window.location.href = "/index.html"
             return
         }
 
