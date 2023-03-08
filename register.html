@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/navigation-bar.css">
-    <link rel="stylesheet" href="/style/register.css">
+    <link rel="stylesheet" href="/style/register2.css">
     <link rel="stylesheet" href="/style/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/style/footer.css">
+    <script src="/script/register.js"
     <title>Register</title>
 </head>
 <body>
@@ -30,15 +31,45 @@
         </div>     
     </div>
 
-    <div class="register">
-        <img src="/assets/sumeru/sumeru-city.jpg" alt="" id="background">
-        <h1>Register</h1>
-        <div class="register-section">
-            <div class="register-container">
-                <img src="/assets/character/character-sumeru/nahida.png" alt="" id="nahida">
-                <img src="/assets/character/character-mondstadt/venti.png" alt="" id="venti">
-                <img src="/assets/character/character-liyue/zhongli.png" alt="" id="zhongli">
-                <img src="/assets/character/character-inazuma/raiden.png" alt="" id="raiden">
+    <div class="register-section">
+        <img class="main-background" src="/assets/register/register-background.jpg">
+        <div class="register">
+            <div class="register-background">
+                <img class="image-background" src="/assets/register/register-characters.jpg">
+                <div class="title">
+                    <img src="/assets/logo/logo-jenshin-impekz-white.png">
+                    <h1>Are You Ready?</h1>
+                </div>
+            </div>
+            <div class="container">
+                <img src="/assets/logo/logo-haiya-black.png">
+                <div class="forms">
+                    <div class="field">
+                        <h3>Fullname</h3>
+                        <input class="user-input" type="text" id="fullname" name="fullname" placeholder="Enter your full name"> 
+                    </div>
+                    <div class="field">
+                        <h3>Email</h3>
+                        <input class="user-input" type="text" id="email" name="email" placeholder="email with @gmail.com"> 
+                    </div>
+                    <div class="field">
+                        <h3>Age</h3>
+                        <input class="user-input" type="number" id="age" name="age" placeholder="minimum age is 18">
+                    </div>
+                    <div class="field">
+                        <h3>Password</h3>
+                        <input class="user-input" type="password" id="password" name="password" placeholder="8 characters">
+                    </div>
+                    <div class="field terms">
+                        <input class="checkbox" type="checkbox" id="agree" name="agree">
+                        <p>Agree with terms & conditions</p>
+                    </div>
+                    <div class="field others">
+                        <a href="/login.html">Login now</a>
+                        <a href="">Forgot password?</a>
+                    </div>
+                    <button class="btn" id="btn">REGISTER</button>
+                </div>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 .register{
     position: relative;
     width: 100%;
-    height: 120vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -10,7 +10,7 @@
 .register #background{
     position: absolute;
     width: 100%;
-    height: 120vh;
+    min-height: 120vh;
     filter: blur(5px);
     scale: 1.2;
 }
@@ -33,49 +33,49 @@
 }
 
 .register-container{
+    position: relative;
     width: 50%;
     height: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: left; */
     background-image: url(/assets/inazuma/serpents-head.jpg);
     /* sementara doang backgroundnya tunggu masuk asset background nya baru masukin */
     overflow: hidden;
 }
 
-.register-container #nahida{
-    position: relative;
-    width: 100%;
-    height : 70%;
-    display: flex;
-    translate: 0% 42%;
+/* .register-container #nahida{
+    position: absolute;
+    height : 100%;
+    bottom: 0px;
     z-index: 9;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .register-container #venti{
-    position: relative;
-    width: 100%;
-    height : 80%;
-    display: flex;
-    translate: -110% 25%;
+    position: absolute;
+    height : 100%;
+    bottom: 0px;
     z-index: 3;
-
+    left: 50%;
+    transform: translateX(-25%);
 }
 
 .register-container #zhongli{
-    position: relative;
-    width: 100%;
-    height : 80%;
-    display: flex;
-    translate: -170% 25%;
+    position: absolute;
+    height : 100%;
+    bottom: 0px;
     z-index: 2;
+    left: 50%;
+    transform: translateX(-75%);
 }
 
 .register-container #raiden{
-    position: relative;
-    width: 120%;
-    height : 70%;
-    display: flex;
-    translate: -270% 0%;
+    position: absolute;
+    height : 100%;
+    bottom: 0px;
     z-index: 1;
-}
+    left: 50%;
+    transform: translateX(-50%);
+} */
