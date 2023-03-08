@@ -88,7 +88,6 @@
 
 .nav-bar .menu .user-profile-non{
     text-decoration: none;
-    /* display: none; */
 }
 
 .nav-bar .menu .user-profile-non h3{
@@ -114,8 +113,8 @@
     align-items: center;
     padding: 20px 40px;
     cursor: pointer;
-    display: none;
     transition: 0.3s all ease-in-out;
+    display: none;
 }
 
 .nav-bar .menu .user-profile-logged:hover {
@@ -143,4 +142,8 @@
 .nav-bar .menu .user-profile-logged .fa-chevron-down {
     font-size: 20px;
     color: var(--white);
+}
+
+.hide {
+    display: none;
 }

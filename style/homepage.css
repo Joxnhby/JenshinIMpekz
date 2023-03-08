@@ -69,7 +69,7 @@ body{
     background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4));
 }
 
-.map-container img {
+.map-container .real-map {
     position: relative;
     width: 100%;
     height: 100%;
@@ -78,12 +78,27 @@ body{
     z-index: -5;
 }
 
+.map-container .character {
+    position: absolute;
+    height: 50%;
+    bottom: 0px;
+    transition: 0.3s all ease-in-out;
+    left: 50%;
+    visibility: hidden;
+}
+
+.map-container:hover .character {
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: visible;
+}
+
 .map-container:hover h1 {
     color: var(--light-yellow);
     transition: 0.5s all ease-in-out;
 }
 
-.map-container:hover img{
+.map-container:hover .real-map{
     position: relative;
     transform: scale(1.2);
     z-index: -1;

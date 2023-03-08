@@ -22,15 +22,15 @@ btn.addEventListener("click", (e)=>{
     usernameVal = username.value
     passwordVal = password.value
 
-    for(let i = 0; i < users.length; i++){
-        if (users[i].username == usernameVal && users[i].password == passwordVal) {
+    users.forEach(user => {
+        if (user.username == usernameVal && user.password == passwordVal) {
             console.log("success")
-            // loggedusername.innerHTML = users[i].username
-            location.href = "index.html"
+            loggedusername.innerHTML = user.username
+            window.location.href = "index.html"
             return
         }
-    }
 
-    username.parentElement.classList.add("error")
-    password.parentElement.classList.add("error")
-}) 
+        username.parentElement.classList.add("error")
+        password.parentElement.classList.add("error")
+    })
+})
