@@ -5,48 +5,61 @@ const password = document.getElementById("password")
 const agree = document.getElementById("agree")
 const btn = document.getElementById("btn")
 
-const fullnameVal = fullname.value
-const emailVal = email.value
-const ageVal = age.value
-const passwordVal = password.value
-const agreeVal = agree.value
+let fullnameVal = fullname.value
+let emailVal = email.value
+let ageVal = age.value
+let passwordVal = password.value
+let agreeVal = agree.value
+const errorHistoryElement = []
+const errorHistoryParent = []
 
-alert("tes")
+function setError(errorMsg, parent) {
+    let error = document.createElement("p")
+    error.classList.add("error-text")
+    error.innerText = errorMsg
+    parent.appendChild(error)
+    parent.classList.add("error")
+    errorHistoryElement.push(error)
+    errorHistoryParent.push(parent)
+}
 
 btn.addEventListener("click", (e)=>{
     e.preventDefault()
+
+    errorHistoryElement.forEach(err => {
+        err.remove()
+    });
+    errorHistoryParent.forEach(err => {
+        err.classList.remove("error")
+    });
+
     fullnameVal = fullname.value
     emailVal = email.value
     ageVal = age.value
     passwordVal = password.value
     agreeVal = agree.value
 
-    const error = document.createElement("p")
-    error.className.add("error-text")
-
     if (fullnameVal.length == 0) {
-        error.innerText = "Fullname can't be empty"
-        fullname.parentElement.appendChild(error)
+        setError("Fullname can't be empty!", fullname.parentElement)
     }
-    fullnameVal.forEach(char => {
-        if (!(char >= 'a' && char <='z') && !(char >= 'A' && char <='Z') && char != ' ') {
-            error.innerText = "Fullname must be alphabetic"
-            fullname.parentElement.appendChild(error)
+    for (let i = 0; i < fullnameVal.length; i++) {
+        if (!(fullnameVal[i] >= 'a' && fullnameVal[i] <='z') && !(fullnameVal[i] >= 'A' && fullnameVal[i] <='Z') && fullnameVal[i] != ' ') {
+            setError("Fullname must be alphabetic!", fullname.parentElement)
+            break
         }
-    });
+    }
 
-    if (emailVal.endsWith != "@gmail.com") {
-        error.innerText = "Email must be @gmail.com"
-        email.parentElement.appendChild(error)
+    if (!emailVal.endsWith("@gmail.com") || emailVal.length < 11) {
+        setError("Email must be @gmail.com", email.parentElement)
     }
 
     if (ageVal < 18) {
-        error.innerText = "Minimum age is 18"
-        age.parentElement.appendChild(error)
+        setError("Minimum age is 18!", age.parentElement)
     }
 
-    if (password.length < 8) {
-        error.innerText = "Password length at least 8 characters"
-        password.parentElement.appendChild(error)
+    if (passwordVal.length < 8) {
+        setError("Password at least 8 characters!", password.parentElement)
     }
+
+    if ()
 })

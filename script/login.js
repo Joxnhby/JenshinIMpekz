@@ -10,7 +10,6 @@ const users = [
 const username = document.getElementById("username")
 const password = document.getElementById("password")
 const loggedusername = document.getElementById("logged-username")
-console.log(loggedusername);
 const btn = document.getElementById("btn")
 
 let usernameVal = username.value

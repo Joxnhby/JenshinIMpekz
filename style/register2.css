@@ -163,7 +163,7 @@
     color: var(--medium-blue);
 }
 
-.error input {
+.error .user-input {
     border: 2px solid var(--fire-red);
 }
 
