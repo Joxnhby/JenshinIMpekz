@@ -39,7 +39,6 @@ function setNews() {
     slider.prepend(wrapper)
     recentNews.push(wrapper)
 
-    console.log("skrg: " + recent)
     if (recent == 0) {
         nextBtn.classList.remove("hide")
     } else if (recent == news.length-1) {
