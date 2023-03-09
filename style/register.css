@@ -1,81 +1,394 @@
-.register{
-    position: relative;
-    width: 100%;
-    min-height: 120vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+@media screen and (min-width: 1000px) {
+    .register-section {
+        width: 100%;
+        min-height: 1100px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .main-background {
+        width: 100%;
+        min-height: 1100px;
+        object-fit: cover;
+        filter: blur(5px);
+        transform: scale(1.2);
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .register {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+        background-color: var(--white);
+        margin-top: 35px;
+    }
+    
+    .register-background {
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .image-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.5);
+    }
+    
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .title img {
+        width: 200px;
+    }
+    
+    .title h1 {
+        font-family: hy-wen-hei;
+        font-size: 32px;
+        color: var(--white);
+        text-align: center;
+        text-shadow: 0px 0px 30px black;
+        margin: 30px 0px;
+    }
+    
+    .container {
+        width: 50%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .container img {
+        width: 200px;
+    }
+    
+    .forms {
+        width: 350px;
+        text-align: left;
+        margin: 30px 0px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 15px 0px;
+        margin: 20px 0px;
+        background-color: var(--inazuma-purple);
+        border: 1.5px solid var(--inazuma-purple);
+        border-radius: 3px;
+        color: var(--white);
+        font-family: hy-wen-hei;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: var(--medium-blue);
+        border: 1.5px solid var(--medium-blue);
+    }
+    
+    .field {
+        position: relative;
+        margin: 20px 0px;
+    }
+    
+    .field h3 {
+        font-family: tahoma;
+        font-size: 18px;
+        margin: 10px 0px;
+        color: var(--medium-blue);
+    }
+    
+    .field .user-input {
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+        border-radius: 3px;
+        border: 1.5px solid var(--light-grey);
+        font-size: 16px;
+        font-family: tahoma;
+        color: rgb(50, 50, 50);
+    }
+    
+    .field .user-input:focus {
+        border: 1px solid var(--inazuma-purple);
+    }
+    
+    .others {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .others a {
+        font-family: tahoma;
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--inazuma-purple);
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .others a:hover {
+        color: var(--medium-blue);
+    }
+    
+    .error .user-input {
+        border: 2px solid var(--fire-red);
+    }
+    
+    .error-text {
+        font-family: tahoma;
+        font-size: 16px;
+        color: var(--fire-red);
+        text-align: left;
+        font-style: italic;
+    }
+    
+    .terms {
+        display: flex;
+        text-align: left;
+    }
+    
+    .terms-text {
+        font-family: tahoma;
+        font-size: 16px;
+        color: rgb(50, 50, 50);
+    }
+    
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
 }
 
-.register #background{
-    position: absolute;
-    width: 100%;
-    min-height: 120vh;
-    filter: blur(5px);
-    scale: 1.2;
+@media screen and (max-width: 1000px) {
+    .register-section {
+        width: 100%;
+        min-height: 1000px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .main-background {
+        position: relative;
+        width: 100%;
+        height: 1000px;
+        object-fit: cover;
+        filter: blur(5px);
+        transform: scale(1.2);
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .register {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: var(--white);
+        margin-top: 35px;
+    }
+    
+    .register-background {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .image-background {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        filter: brightness(0.5);
+    }
+    
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .title img {
+        width: 100px;
+    }
+    
+    .title h1 {
+        font-family: hy-wen-hei;
+        font-size: 24px;
+        color: var(--white);
+        text-align: center;
+        text-shadow: 0px 0px 30px black;
+        margin: 10px 0px;
+    }
+    
+    .container {
+        width: 90%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 30px 0px 30px;
+    }
+    
+    .container img {
+        width: 150px;
+    }
+    
+    .forms {
+        width: 90%;
+        text-align: left;
+        margin: 10px 0px;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 15px 0px;
+        margin: 20px 0px;
+        background-color: var(--inazuma-purple);
+        border: 1.5px solid var(--inazuma-purple);
+        border-radius: 3px;
+        color: var(--white);
+        font-family: hy-wen-hei;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .btn:hover {
+        background-color: var(--medium-blue);
+        border: 1.5px solid var(--medium-blue);
+    }
+    
+    .field {
+        position: relative;
+        margin: 12px 0px;
+    }
+    
+    .field h3 {
+        font-family: tahoma;
+        font-size: 15px;
+        margin: 10px 0px;
+        color: var(--medium-blue);
+    }
+    
+    .field .user-input {
+        width: calc(100% - 30px);
+        padding: 12px 15px;
+        border-radius: 3px;
+        border: 1.5px solid var(--light-grey);
+        font-size: 14px;
+        font-family: tahoma;
+        color: rgb(50, 50, 50);
+    }
+    
+    .field .user-input:focus {
+        border: 1px solid var(--inazuma-purple);
+    }
+    
+    .others {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .others a {
+        font-family: tahoma;
+        font-size: 14px;
+        text-decoration: none;
+        color: var(--inazuma-purple);
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .others a:hover {
+        color: var(--medium-blue);
+    }
+    
+    .error .user-input {
+        border: 2px solid var(--fire-red);
+    }
+    
+    .error-text {
+        font-family: tahoma;
+        font-size: 14px;
+        color: var(--fire-red);
+        text-align: left;
+        font-style: italic;
+    }
+    
+    .terms {
+        display: flex;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .terms-text {
+        font-family: tahoma;
+        font-size: 14px;
+        color: rgb(50, 50, 50);
+    }
+    
+    .checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
 }
-
-.register h1{
-    position: absolute;
-    font-family: hy-wen-hei;
-    font-size: 50px;
-    color: white;
-    margin: 90px 0px 0px 43%;
-}
-
-.register .register-section{
-    text-align: center;
-    width: 80%;
-    height: 60%;
-    background-color: rgb(255, 255, 255);
-    z-index: 1;
-    margin: 180px 0px 0px 10%;
-}
-
-.register-container{
-    position: relative;
-    width: 50%;
-    height: 100%;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: left; */
-    background-image: url(/assets/inazuma/serpents-head.jpg);
-    /* sementara doang backgroundnya tunggu masuk asset background nya baru masukin */
-    overflow: hidden;
-}
-
-/* .register-container #nahida{
-    position: absolute;
-    height : 100%;
-    bottom: 0px;
-    z-index: 9;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.register-container #venti{
-    position: absolute;
-    height : 100%;
-    bottom: 0px;
-    z-index: 3;
-    left: 50%;
-    transform: translateX(-25%);
-}
-
-.register-container #zhongli{
-    position: absolute;
-    height : 100%;
-    bottom: 0px;
-    z-index: 2;
-    left: 50%;
-    transform: translateX(-75%);
-}
-
-.register-container #raiden{
-    position: absolute;
-    height : 100%;
-    bottom: 0px;
-    z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-} */
