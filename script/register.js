@@ -23,7 +23,7 @@ function setError(errorMsg, parent) {
     errorHistoryParent.push(parent)
 }
 
-btn.addEventListener("click", (e)=>{
+function validate(e) {
     e.preventDefault()
 
     errorHistoryElement.forEach(err => {
@@ -74,5 +74,34 @@ btn.addEventListener("click", (e)=>{
 
     if (errorHistoryParent.length == 0) {
         window.location.href = "/login.html"
+    }
+}
+
+btn.addEventListener("click", (e)=>{
+    validate(e)
+})
+fullname.addEventListener("keypress", (e)=>{
+    if (e.key === "Enter") {
+        validate(e)
+    }
+})
+email.addEventListener("keypress", (e)=>{
+    if (e.key === "Enter") {
+        validate(e)
+    }
+})
+age.addEventListener("keypress", (e)=>{
+    if (e.key === "Enter") {
+        validate(e)
+    }
+})
+password.addEventListener("keypress", (e)=>{
+    if (e.key === "Enter") {
+        validate(e)
+    }
+})
+agree.addEventListener("keypress", (e)=>{
+    if (e.key === "Enter") {
+        validate(e)
     }
 })
