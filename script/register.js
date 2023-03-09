@@ -9,7 +9,7 @@ let fullnameVal = fullname.value
 let emailVal = email.value
 let ageVal = age.value
 let passwordVal = password.value
-let agreeVal = agree.value
+let agreeVal = agree.checked
 const errorHistoryElement = []
 const errorHistoryParent = []
 
@@ -44,7 +44,7 @@ btn.addEventListener("click", (e)=>{
     emailVal = email.value
     ageVal = age.value
     passwordVal = password.value
-    agreeVal = agree.value
+    agreeVal = agree.checked
 
     if (fullnameVal.length == 0) {
         setError("Fullname can't be empty!", fullname.parentElement)
@@ -68,11 +68,9 @@ btn.addEventListener("click", (e)=>{
         setError("Password at least 8 characters!", password.parentElement)
     }
 
-    if (agreeVal != "true") {
+    if (!agreeVal) {
         setError("You have to agree to continue!", agree.parentElement.parentElement)
     }
-
-    console.log(errorHistoryParent[0])
 
     if (errorHistoryParent.length == 0) {
         window.location.href = "/login.html"
