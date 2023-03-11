@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="/style/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="shortcut icon" href="/assets/image/paimon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="/script/navigation-bar.js" defer=""></script>
     <script src="/script/login.js" defer=""></script>
 </head>
 <body>
     <div class="nav-bar">
         <img src="/assets/logo/logo-jenshin-impekz-black.png" alt="logo jenshin" class = "logo">
         <div class="menu">
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
+                <i class="fa-solid fa-xmark close-icon" id="close-icon"></i>
                 <a href="/index.html">Home</a>
                 <a href="/pages/characters.html">Characters</a>
                 <a href="/pages/map.html">Map</a>
@@ -27,8 +30,9 @@
             </a>
             <div class="user-profile-logged">
                 <img src="/assets/image/user-profile-dummy.webp" alt="">
-                <h3>Username</h3>
+                <h3 id="logged-username">Username</h3>
             </div>
+            <i class="fa-solid fa-bars burger-icon" id="burger-icon"></i>
         </div>     
     </div>
 
@@ -46,8 +50,8 @@
                 <img src="/assets/logo/logo-haiya-black.png">
                 <div class="forms">
                     <div class="field">
-                        <h3>Username</h3>
-                        <input type="text" id="username" name="username" placeholder="Enter your username"> 
+                        <h3>Email</h3>
+                        <input type="text" id="email" name="email" placeholder="email with @gmail.com"> 
                     </div>
                     <div class="field">
                         <h3>Password</h3>

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Register</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/navigation-bar.css">
     <link rel="stylesheet" href="/style/register.css">
     <link rel="stylesheet" href="/style/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/style/footer.css">
-    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"><link rel="stylesheet" href="/style/footer.css">
+    <script src="/script/navigation-bar.js" defer=""></script>
+    <script src="/script/register.js" defer=""></script>
 </head>
 <body>
     <div class="nav-bar">
         <img src="/assets/logo/logo-jenshin-impekz-black.png" alt="logo jenshin" class = "logo">
         <div class="menu">
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
+                <i class="fa-solid fa-xmark close-icon" id="close-icon"></i>
                 <a href="/index.html">Home</a>
                 <a href="/pages/characters.html">Characters</a>
                 <a href="/pages/map.html">Map</a>
@@ -25,17 +28,53 @@
             </a>
             <div class="user-profile-logged">
                 <img src="/assets/image/user-profile-dummy.webp" alt="">
-                <h3 id="logged-username">Hellooooooo</h3>
+                <h3 id="logged-username">Username</h3>
             </div>
+            <i class="fa-solid fa-bars burger-icon" id="burger-icon"></i>
         </div>     
     </div>
 
-    <div class="register">
-        <img src="/assets/sumeru/sumeru-city.jpg" alt="">
-        <h1>Register</h1>
-        <div class="register-section">
-            <div class="register-container">
-
+    <div class="register-section">
+        <img class="main-background" src="/assets/register/register-background.jpg">
+        <div class="register">
+            <div class="register-background">
+                <img class="image-background" src="/assets/register/register-characters.jpg">
+                <div class="title">
+                    <img src="/assets/logo/logo-jenshin-impekz-white.png">
+                    <h1>Are You Ready?</h1>
+                </div>
+            </div>
+            <div class="container">
+                <img src="/assets/logo/logo-haiya-black.png">
+                <div class="forms">
+                    <div class="field">
+                        <h3>Fullname</h3>
+                        <input class="user-input" type="text" id="fullname" name="fullname" placeholder="Enter your full name"> 
+                    </div>
+                    <div class="field">
+                        <h3>Email</h3>
+                        <input class="user-input" type="text" id="email" name="email" placeholder="email with @gmail.com"> 
+                    </div>
+                    <div class="field">
+                        <h3>Age</h3>
+                        <input class="user-input" type="number" id="age" name="age" placeholder="minimum age is 18">
+                    </div>
+                    <div class="field">
+                        <h3>Password</h3>
+                        <input class="user-input" type="password" id="password" name="password" placeholder="minimum 8 characters">
+                    </div>
+                    <div class="field">
+                        <div class="terms">
+                            <input class="checkbox" type="checkbox" id="agree" name="agree">
+                            <p class="terms-text">Agree with terms & conditions</p>
+                        </div>
+                    </div>
+                    <div class="field others">
+                        <a href="/login.html">Login now</a>
+                        <a href="">Forgot password?</a>
+                    </div>
+                    <button class="btn" id="btn">REGISTER</button>
+                </div>
             </div>
         </div>
     </div>

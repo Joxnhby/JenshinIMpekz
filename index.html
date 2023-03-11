@@ -11,13 +11,17 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="shortcut icon" href="/assets/image/paimon.png" type="image/png">
-    <script src="script/news.js" defer=""></script>
+    <script src="/script/navigation-bar.js" defer=""></script>
+    <script src="/script/news.js" defer=""></script>
 </head>
 <body>
     <div class="nav-bar">
         <img src="/assets/logo/logo-jenshin-impekz-black.png" alt="logo jenshin" class = "logo">
         <div class="menu">
-            <div class="header-menu">
+            <div class="header-menu" id="header-menu">
+                <div class="close-icon" id="close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <a href="/index.html">Home</a>
                 <a href="/pages/characters.html">Characters</a>
                 <a href="/pages/map.html">Map</a>
@@ -28,37 +32,44 @@
             </a>
             <div class="user-profile-logged">
                 <img src="/assets/image/user-profile-dummy.webp" alt="">
-                <h3 id="logged-username">Hellooooooo</h3>
+                <h3 id="logged-username">Username</h3>
+            </div>
+            <div class="burger-icon" id="burger-icon">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>     
     </div>
 
     <div class= "top-photo">
-        <img src="/assets/homepage/top-photo.webp">
+        <img class="desktop-wall" src="/assets/homepage/top-photo.webp">
+        <!-- https://wallpaperaccess.com/genshin-impact-phone -->
+        <img class="mobile-wall" src="/assets/homepage/mobile-top-photo.webp">
         <div class="title">
             <h1>Explore The World of Fantasy</h1>
         </div>
     </div>
 
-    
-
     <div class="map">
         <div class = "map-section">
             <div class="map-container">
-                <img src="/assets/mondstadt/mondstadt-city.jpg" alt="mondstadt">
+                <img class="real-map" src="/assets/mondstadt/mondstadt-city.jpg" alt="mondstadt">
                 <h1>Mondstadt</h1>
+                <img class="character" src="/assets/character/character-mondstadt/venti.png">
             </div>
             <div class="map-container">
-                <img src="/assets/liyue/harbor.png" alt="liyue">
+                <img class="real-map" src="/assets/liyue/harbor.png" alt="liyue">
                 <h1>Liyue</h1>
+                <img class="character" src="/assets/character/character-liyue/ganyu.png">
             </div>
             <div class="map-container">
-                <img src="/assets/inazuma/inazuma.jpg" alt="inazuma">
+                <img class="real-map" src="/assets/inazuma/inazuma.jpg" alt="inazuma">
                 <h1>Inazuma</h1>
+                <img class="character" src="/assets/character/character-inazuma/raiden.png">
             </div>
             <div class="map-container">
-                <img src="/assets/sumeru/sumeru.png" alt="sumeru">
+                <img class="real-map" src="/assets/sumeru/sumeru.png" alt="sumeru">
                 <h1>Sumeru</h1>
+                <img class="character" src="/assets/character/character-sumeru/wanderer.png">
             </div>
     </div>
 
