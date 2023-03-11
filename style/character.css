@@ -1,224 +1,682 @@
-body {
-    margin-top: 75px;
-}
+@media screen and (max-width: 500px) {
+    body {
+        margin-top: 60px;
+    }
 
-.character-section {
-    width: 100%;
-    height: calc(100vh - 75px);
-    position: relative;
-    overflow: hidden;
-}
+    .character-section {
+        width: 100%;
+        height: calc(100vh - 75px);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* .character-section .character-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
 
-.character-section .character-background {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-
-.character-section .character-background img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.scenery-bg {
-    filter: blur(5px);
-    transform: scale(1.2);
-
-    animation-name: zoom-in-and-out;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-play-state: running;
-}
-
-@keyframes zoom-in-and-out{
-    0% {
+    .character-section .character-background img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .scenery-bg {
+        filter: blur(5px);
         transform: scale(1.2);
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .character-section .character-background .content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .character-section .character-background .content img {
+        width: 100%;
+        height: 100%;
+        transform: translateX(240px);
+        object-fit: contain;
+    }
+    
+    .character-section .character-background .content .details {
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-60%);
+    
+    }
+    
+    .character-section .character-background .content .details hr {
+        border: 2px solid var(--light-yellow);
+        width: 100px;
+    }
+    
+    .character-section .character-background .content .details h2 {
+        font-family: hy-wen-hei;
+        font-size: 36px;
+        color: var(--white);
+        margin: 4% 0px;
+        text-shadow: 3px 3px 0px var(--deep-blue);
+    }
+    
+    .character-section .character-background .content .details .contain {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 25px;
+        overflow-y: scroll;
+        height: 75%;
+        scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .character-background .content .details .contain p {
+        text-align: left;
+        font-family: tahoma;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--white);
+    }
+    
+    .character-section .characters-list {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .characters-list .character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 50px;
+        min-height: 50px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .character-section .characters-list .character:hover {
+        border: 2px solid var(--white);
+    }
+    
+    .character-section .characters-list .character:hover h3 {
+        background-color: var(--white);
+        color: var(--medium-blue);
+    }
+    
+    .character-section .characters-list .character img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .character h3 {
+        font-family: tahoma;
+        color: var(--white);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--deep-blue);
+    } */
+    
+    .character-section .side-nav {
+        position: absolute;
+        width: 100%;
+        top: 0%;      
+        float: left;
+        display: flex;
+    }
+    
+    .character-section .side-nav p {
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-family: hy-wen-hei;
+        padding: 20px 15px;
+        color: var(--white);
+        transition: 0.3s all ease-in-out;
+        text-shadow: 1px 1px 0px var(--deep-blue);
+    }
+    
+    .character-section .side-nav p:hover {
+        padding: 20px 15%px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    }
+    
+    .active-side-nav {
+        padding: 20px 15%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    }
+    
+    .active-character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 30px;
+        min-height: 30px;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .active-character img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .active-character h3 {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: tahoma;
+        font-weight: normal;
+        color: var(--deep-blue);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        background-color: var(--white);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    body {
+        margin-top: 60px;
     }
 
-    100% {
-        transform: scale(1.4);
+    .character-section {
+        width: 100%;
+        height: calc(100vh - 75px);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* .character-section .character-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .character-section .character-background img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .scenery-bg {
+        filter: blur(5px);
+        transform: scale(1.2);
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .character-section .character-background .content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .character-section .character-background .content img {
+        width: 100%;
+        height: 100%;
+        transform: translateX(240px);
+        object-fit: contain;
+    }
+    
+    .character-section .character-background .content .details {
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-60%);
+    
+    }
+    
+    .character-section .character-background .content .details hr {
+        border: 2px solid var(--light-yellow);
+        width: 100px;
+    }
+    
+    .character-section .character-background .content .details h2 {
+        font-family: hy-wen-hei;
+        font-size: 36px;
+        color: var(--white);
+        margin: 4% 0px;
+        text-shadow: 3px 3px 0px var(--deep-blue);
+    }
+    
+    .character-section .character-background .content .details .contain {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 25px;
+        overflow-y: scroll;
+        height: 75%;
+        scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .character-background .content .details .contain p {
+        text-align: left;
+        font-family: tahoma;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--white);
+    }
+    
+    .character-section .characters-list {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .characters-list .character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 50px;
+        min-height: 50px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .character-section .characters-list .character:hover {
+        border: 2px solid var(--white);
+    }
+    
+    .character-section .characters-list .character:hover h3 {
+        background-color: var(--white);
+        color: var(--medium-blue);
+    }
+    
+    .character-section .characters-list .character img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .character h3 {
+        font-family: tahoma;
+        color: var(--white);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--deep-blue);
+    } */
+    
+    .character-section .side-nav {
+        position: absolute;
+        width: 100%;
+        top: 0%;      
+        float: left;
+        display: flex;
+        flex-direction: row;
+        margin: 0px 0px;
+    }
+    
+    .character-section .side-nav p {
+        width: 25%;
+        text-align: center;
+        text-decoration: none;
+        font-family: hy-wen-hei;
+        padding: 20px 15px;
+        color: var(--white);
+        transition: 0.3s all ease-in-out;
+        text-shadow: 1px 1px 0px var(--deep-blue);
+    }
+    
+    .character-section .side-nav p:hover {
+        padding: 20px 15%px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    }
+    
+    .active-side-nav {
+        padding: 20px 15%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    }
+    
+    .active-character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 30px;
+        min-height: 30px;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .active-character img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .active-character h3 {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: tahoma;
+        font-weight: normal;
+        color: var(--deep-blue);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        background-color: var(--white);
     }
 }
 
-.character-section .character-background .content{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
+@media screen and (min-width: 1000px) {
+    body {
+        margin-top: 75px;
+    }
 
-.character-section .character-background .content img {
-    width: 100%;
-    height: 100%;
-    transform: translateX(240px);
-    object-fit: contain;
-}
+    .character-section {
+        width: 100%;
+        height: calc(100vh - 75px);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .character-section .character-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
 
-.character-section .character-background .content .details {
-    width: 50%;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-60%);
-
-}
-
-.character-section .character-background .content .details hr {
-    border: 2px solid var(--light-yellow);
-    width: 100px;
-}
-
-.character-section .character-background .content .details h2 {
-    font-family: hy-wen-hei;
-    font-size: 36px;
-    color: var(--white);
-    margin: 4% 0px;
-    text-shadow: 3px 3px 0px var(--deep-blue);
-}
-
-.character-section .character-background .content .details .contain {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 15px 25px;
-    overflow-y: scroll;
-    height: 75%;
-    scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.character-section .character-background .content .details .contain p {
-    text-align: left;
-    font-family: tahoma;
-    font-size: 14px;
-    line-height: 22px;
-    color: var(--white);
-}
-
-.character-section .characters-list {
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: 0px;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.character-section .characters-list .character {
-    max-width: 80px;
-    width: max-content;
-    max-height: 120px;
-    height: max-content;
-    min-width: 30px;
-    min-height: 30px;
-    border: 2px solid rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 0px 15px;
-    cursor: pointer;
-}
-
-.character-section .characters-list .character:hover {
-    border: 2px solid var(--white);
-}
-
-.character-section .characters-list .character:hover h3 {
-    background-color: var(--white);
-    color: var(--medium-blue);
-}
-
-.character-section .characters-list .character img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.character-section .characters-list .character h3 {
-    font-family: tahoma;
-    color: var(--white);
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--deep-blue);
-}
-
-.character-section .side-nav {
-    position: absolute;
-    top: 20%;
-    transform: translateY(-50%);
-    float: left;
-    width: 300px;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    margin: 70px 0px;
-}
-
-.character-section .side-nav p {
-    text-align: left;
-    text-decoration: none;
-    font-family: hy-wen-hei;
-    padding: 20px 25%;
-    color: var(--white);
-    transition: 0.3s all ease-in-out;
-    text-shadow: 1px 1px 0px var(--deep-blue);
-}
-
-.character-section .side-nav p:hover {
-    padding: 20px 90px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-}
-
-.active-side-nav {
-    padding: 20px 90px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
-
-.active-character {
-    width: 80px;
-    height: 80px;
-    min-width: 30px;
-    min-height: 30px;
-    border: 2px solid var(--white);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    margin: 0px 15px;
-    cursor: pointer;
-}
-
-.active-character img{
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.character-section .characters-list .active-character h3 {
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: tahoma;
-    font-weight: normal;
-    color: var(--deep-blue);
-    text-align: center;
-    font-size: 14px;
-    font-style: normal;
-    background-color: var(--white);
+    .character-section .character-background img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .scenery-bg {
+        filter: blur(5px);
+        transform: scale(1.2);
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .character-section .character-background .content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .character-section .character-background .content img {
+        width: 100%;
+        height: 100%;
+        transform: translateX(240px);
+        object-fit: contain;
+    }
+    
+    .character-section .character-background .content .details {
+        width: 50%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-60%);
+    
+    }
+    
+    .character-section .character-background .content .details hr {
+        border: 2px solid var(--light-yellow);
+        width: 100px;
+    }
+    
+    .character-section .character-background .content .details h2 {
+        font-family: hy-wen-hei;
+        font-size: 36px;
+        color: var(--white);
+        margin: 4% 0px;
+        text-shadow: 3px 3px 0px var(--deep-blue);
+    }
+    
+    .character-section .character-background .content .details .contain {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 25px;
+        overflow-y: scroll;
+        height: 75%;
+        scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .character-background .content .details .contain p {
+        text-align: left;
+        font-family: tahoma;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--white);
+    }
+    
+    .character-section .characters-list {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .characters-list .character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 50px;
+        min-height: 50px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .character-section .characters-list .character:hover {
+        border: 2px solid var(--white);
+    }
+    
+    .character-section .characters-list .character:hover h3 {
+        background-color: var(--white);
+        color: var(--medium-blue);
+    }
+    
+    .character-section .characters-list .character img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .character h3 {
+        font-family: tahoma;
+        color: var(--white);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--deep-blue);
+    }
+    
+    .character-section .side-nav {
+        position: absolute;
+        top: 20%;
+        transform: translateY(-50%);
+        float: left;
+        width: 300px;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+        margin: 70px 0px;
+    }
+    
+    .character-section .side-nav p {
+        text-align: left;
+        text-decoration: none;
+        font-family: hy-wen-hei;
+        padding: 20px 25%;
+        color: var(--white);
+        transition: 0.3s all ease-in-out;
+        text-shadow: 1px 1px 0px var(--deep-blue);
+    }
+    
+    .character-section .side-nav p:hover {
+        padding: 20px 90px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    }
+    
+    .active-side-nav {
+        padding: 20px 90px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    }
+    
+    .active-character {
+        max-width: 90px;
+        width: max-content;
+        max-height: 120px;
+        height: max-content;
+        min-width: 30px;
+        min-height: 30px;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 15px;
+        cursor: pointer;
+    }
+    
+    .active-character img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .active-character h3 {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: tahoma;
+        font-weight: normal;
+        color: var(--deep-blue);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        background-color: var(--white);
+    }
 }
