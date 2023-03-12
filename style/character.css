@@ -550,6 +550,7 @@
         padding: 15px 25px;
         overflow-y: scroll;
         height: 75%;
+        width: 80%;
         scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
         display: flex;
         justify-content: center;
