@@ -63,7 +63,10 @@ function validate(e) {
     users.forEach(user => {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
-            window.location.href = "/index.html"
+            const firstName = user.name.split(" ")
+            setCookie("firstName", firstName[0])
+            console.log(document.cookie)
+            window.location.href = "/"
             return
         }
     })
@@ -85,3 +88,10 @@ email.addEventListener("keypress", (e)=>{
         validate(e)
     }
 })
+
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
+    let expired = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value};${expired};path=/`
+}
