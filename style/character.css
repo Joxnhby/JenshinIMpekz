@@ -230,7 +230,7 @@
     }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 501px) and (max-width : 1000px) {
     body {
         margin-top: 60px;
     }
