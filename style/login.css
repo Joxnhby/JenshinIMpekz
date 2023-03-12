@@ -300,7 +300,7 @@
         border-radius: 3px;
         color: var(--white);
         font-family: hy-wen-hei;
-        font-size: 18px;
+        font-size: 16px;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
     }

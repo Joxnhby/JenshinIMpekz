@@ -1,73 +1,145 @@
-body{
-   background-image: url(/Assets/homepage/home-page-background.webp);
+@media screen and (min-width: 1000px) {
+    .teyvat{
+        font-size: 80px;
+        text-align: center;
+        font-family: hy-wen-hei;
+        font-weight: lighter;
+        margin: 60px 0px 50px 0px;
+        color: white;
+    }
+
+    .map-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .map-background .details {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    .map-background .details .logo-region {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        filter: brightness(1.2);
+    }
+
+    .map-background img{
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.7);
+        z-index: -10;
+        object-fit: cover;
+    }
+
+    pre{
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.7em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .map-title{
+        font-size: 50px;
+        text-align: center;
+        font-family: hy-wen-hei;
+        color: white;
+        margin: 0px 0px 40px 0px;
+    }
+
+    .map-background h3{
+        color: white;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .map-background h3:hover{
+        color:var(--light-yellow);
+        margin-top: -6px;
+        font-size: 24px;
+        transition-duration: 0.1s;
+    }
 }
 
-.teyvat{
-    font-size: 80px;
-    text-align: center;
-    font-family: hy-wen-hei;
-    font-weight: lighter;
-    margin: 60px 0px 50px 0px;
-    color: white;
-}
+@media screen and (max-width: 1000px) {
+    .teyvat{
+        font-size: 60px;
+        text-align: center;
+        font-family: hy-wen-hei;
+        font-weight: lighter;
+        margin: 60px 0px 50px 0px;
+        color: var(--white);
+    }
 
-.map-background {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
+    .map-background {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
 
-.map-background .details {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    height: auto;
-    transform: translateY(-50%);
-    text-align: center;
-}
+    .map-background .details {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-.map-background .details .logo-region {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    filter: brightness(1.2);
-}
+    .map-background .details .logo-region {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        filter: brightness(1.2);
+        margin-bottom: 10px;
+    }
 
-.map-background img{
-    width: 100%;
-    height: 100%;
-    filter: brightness(0.7);
-    z-index: -10;
-    object-fit: cover;
-}
+    .map-background img{
+        width: 100%;
+        height: 100%;
+        filter: brightness(0.6);
+        z-index: -10;
+        object-fit: cover;
+    }
 
-pre{
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    line-height: 1.7em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    .details p{
+        width: 100%;
+        color: var(--white);
+        font-size: 16px;
+        text-align: center;
+        line-height: 24px;
+        font-family: tahoma;
+        margin: 20px 0px;
+    }
 
-.map-title{
-    font-size: 50px;
-    text-align: center;
-    font-family: hy-wen-hei;
-    color: white;
-    margin: 0px 0px 40px 0px;
-}
+    .map-title{
+        font-size: 32px;
+        text-align: center;
+        font-family: hy-wen-hei;
+        color: white;
+    }
 
-.map-background h3{
-    color: white;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-}
+    .map-background h3{
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 
-.map-background h3:hover{
-    color:var(--light-yellow);
-    margin-top: -6px;
-    font-size: 24px;
-    transition-duration: 0.1s;
+    .map-background h3:hover{
+        color:var(--light-yellow);
+        margin-top: -6px;
+        font-size: 24px;
+        transition-duration: 0.1s;
+    }
 }
