@@ -129,14 +129,17 @@
         color: white;
     }
 
-    .map-background h3{
+    .details h3{
+        border-radius: 5px;
+        text-align: center;
         color: white;
         font-size: 18px;
         text-decoration: none;
-        background-color: rgba(255, 255, 255, 0.5);
+        padding: 12px 0px;
+        background-color: rgba(255, 255, 255, 0.25);
     }
 
-    .map-background h3:hover{
+    .details h3:hover{
         color:var(--light-yellow);
         margin-top: -6px;
         font-size: 24px;
