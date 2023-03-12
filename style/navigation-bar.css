@@ -187,7 +187,7 @@
 
     .burger-icon i {
         color: var(--deep-blue);
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .header-menu-show {
@@ -212,7 +212,7 @@
         background-color: var(--white);
         box-shadow: 0px 0px 20px 0px rgba(17, 36, 54, 0.6);
         transition: 0.3s all ease-in-out;
-        padding: 10px 0px;
+        padding: 15px 0px;
         right: 0px;
         z-index: 110;
         overflow: scroll;
@@ -224,19 +224,19 @@
     }
 
     .close-icon i {
-        font-size: 30px;
+        font-size: 26px;
         color: var(--medium-blue);
-        padding: 20px 30px;
+        padding: 15px 30px;
     }
     
     .header-menu a{
         width: 100%;
-        padding: 20px 30px;
+        padding: 15px 30px;
         font-family: hy-wen-hei;
         color: var(--medium-blue);
         text-decoration: none;
         text-align: right;
-        font-size: 18px;
+        font-size: 16px;
         transition: 0.3s all ease-in-out;
     }
     
@@ -250,7 +250,7 @@
     }
     
     .user-profile-non h3{
-        margin: 0px 20px;
+        margin: 0px 30px;
         padding: 12px 30px;
         background-color: var(--inazuma-purple);
         font-family: hy-wen-hei;
@@ -259,7 +259,7 @@
         border-radius: 3px;
         transition: 0.3s all ease-in-out;
         cursor: pointer;
-        display: none;
+        /* display: none; */
     }
     
     .user-profile-non h3:hover {
@@ -275,7 +275,7 @@
         margin: 0px 10px;
         cursor: pointer;
         transition: 0.3s all ease-in-out;
-        /* display: none; */
+        display: none;
     }
     
     .user-profile-logged:hover {

@@ -331,9 +331,27 @@
         position: absolute;
         height: 150%;
         top: 0px;
-        left: 15%;
+        left: calc(70vw - 180px);
         transition: 0.3s all ease-in-out;
         opacity: 1;
+        filter: brightness(0.9);
+
+        animation-name: up-and-down;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+
+    @keyframes up-and-down{
+        0% {
+            transform: translateY(-10px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+        }
     }
     
     .map-container:hover h1 {
