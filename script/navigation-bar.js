@@ -56,6 +56,7 @@ logoutBtn.addEventListener("click", (e)=>{
     username.parentElement.parentElement.style.display = "none"
 })
 
+logoutBtn.style.top = "-200px"
 account.addEventListener("click", (e)=>{
     if (logoutBtn.style.top == "-200px") {
         logoutBtn.style.top = "110%"

@@ -164,7 +164,7 @@
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-        top: -100%;
+        top: -200px;
         background-color: var(--white);
         padding: 10px;
         border-radius: 3px;
