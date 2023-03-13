@@ -529,12 +529,14 @@
         top: 10%;
         left: 50%;
         transform: translateX(-60%);
+        text-align: center;
     
     }
     
     .character-section .character-background .content .details hr {
         border: 2px solid var(--light-yellow);
         width: 100px;
+        transform: translateX(215%);
     }
     
     .character-section .character-background .content .details h2 {
@@ -543,6 +545,7 @@
         color: var(--white);
         margin: 4% 0px;
         text-shadow: 3px 3px 0px var(--deep-blue);
+        
     }
     
     .character-section .character-background .content .details .contain {
@@ -550,11 +553,12 @@
         padding: 15px 25px;
         overflow-y: scroll;
         height: 75%;
-        width: 80%;
+        width: 50%;
         scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: translateX(40%);
     }
     
     .character-section .character-background .content .details .contain p {
@@ -568,6 +572,7 @@
     .character-section .characters-list {
         width: 100%;
         height: 30%;
+        min-height: 25%;
         position: absolute;
         bottom: 0px;
         background-color: rgba(255, 255, 255, 0.2);
@@ -628,7 +633,6 @@
         transform: translateY(-50%);
         float: left;
         width: 300px;
-        min-width: 150px;
         display: flex;
         flex-direction: column;
         margin: 70px 0px;
