@@ -162,112 +162,27 @@ const characters = [
 ];
 
 const background = document.getElementById("scenery-bg")
-const character = document.getElementById("char-bg")
-const charname = document.getElementById("char-name")
+const characterBg = document.getElementById("char-bg")
+const charName = document.getElementById("char-name")
 const details = document.getElementById("char-details")
-const map = document.getElementsByClassName("map")
-var charList = document.getElementById("characters-list")
-var count = 0
+const maps = document.getElementsByClassName("map")
+let charList = document.getElementById("characters-list")
+let count = 0
 const activeChar = []
+const displayedCharSource = []
+const displayedChar = []
 const activeMap = []
+const choosedMap = getCookie("choosedMap")
 
-function clearLastActiveChar() {
-    activeChar[activeChar.length-1].classList.remove("active-character")
-    activeChar[activeChar.length-1].classList.add("character")
-    activeChar.pop()
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
+    let expired = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value};${expired};path=/`
 }
 
-function setActiveChar(makecharacters) {
-    makecharacters.classList.remove("character")
-    makecharacters.classList.add("active-character")
-    activeChar.push(makecharacters)
-}
-
-function setRecentMap(recentMap) {
-    activeMap[activeMap.length-1].classList.remove("active-side-nav")
-    recentMap.classList.add("active-side-nav")
-    activeMap.pop()
-    activeMap.push(recentMap)
-}
-
-activeMap.push(map[0])
-for(let j = 0; j < characters.length; j++){
-    if(characters[j].map == "mondstadt"){
-        const makecharacters = document.createElement("div")
-        if(j == 0) {
-            makecharacters.classList.add("active-character")
-            activeChar.push(makecharacters)
-        } else {
-            makecharacters.classList.add("character")
-        }
-        const charactersimage = document.createElement("img")
-        charactersimage.setAttribute("src", characters[j].avatar)
-        const charactersname = document.createElement("h3")
-        charactersname.innerText = characters[j].name
-        makecharacters.appendChild(charactersimage)
-        makecharacters.appendChild(charactersname)
-        charList = document.getElementById("characters-list")
-        charList.appendChild(makecharacters)
-        
-        makecharacters.addEventListener("click", (e)=>{
-            clearLastActiveChar()
-            character.src = characters[j].photo
-            charname.innerText = characters[j].name
-            details.innerText = characters[j].story
-            setActiveChar(makecharacters)
-        })
-        
-    }
-}
-
-for(let i = 0; i < map.length; i++){
-    map[i].addEventListener("click", (e)=>{
-        setRecentMap(map[i])
-        count = 0
-        while(charList.firstChild) {
-            charList.removeChild(charList.lastChild)
-        }
-        for(let j = 0; j < characters.length; j++){
-            if(characters[j].map == map[i].innerHTML.toLowerCase()){
-                background.src = characters[j].background
-                console.log(characters[j].background)
-                const makecharacters = document.createElement("div")
-                if(count == 0) {
-                    makecharacters.classList.add("active-character")
-                    activeChar.push(makecharacters)
-                } else {
-                    makecharacters.classList.add("character")
-                }
-                const charactersimage = document.createElement("img")
-                charactersimage.setAttribute("src", characters[j].avatar)
-                const charactersname = document.createElement("h3")
-                charactersname.innerText = characters[j].name
-                makecharacters.appendChild(charactersimage)
-                makecharacters.appendChild(charactersname)
-                charList.appendChild(makecharacters)
-
-                if(count == 0){
-                    character.src = characters[j].photo
-                    charname.innerText = characters[j].name
-                    details.innerText = characters[j].story
-                    charList.childNodes[0].classList.add("active-character")
-                }
-                else{
-                    charList.childNodes[count].classList.add("character")
-                }
-                for(let i = count; i < charList.childNodes.length; i++){
-                    charList.childNodes[i].addEventListener("click", (e)=>{
-                        clearLastActiveChar()
-                        character.src = characters[j].photo
-                        charname.innerText = characters[j].name
-                        details.innerText = characters[j].story
-                        setActiveChar(charList.childNodes[i])
-                    })
-                }   
-                count++;
-            }
-        }
-    })
+function deleteCookie(name) {
+    setCookie(name, null, null)
 }
 
 function getCookie(name) {
@@ -283,3 +198,100 @@ function getCookie(name) {
     return result
 }
 
+function clearLastActiveChar() {
+    if (activeChar.length != 0) {
+        activeChar[activeChar.length-1].classList.remove("active-character")
+        activeChar[activeChar.length-1].classList.add("character")
+        activeChar.pop()
+    }
+}
+
+function setActiveChar(character) {
+    clearLastActiveChar()
+    character.classList.remove("character")
+    character.classList.add("active-character")
+    activeChar.push(character)
+}
+
+function setRecentMap(recentMap) {
+    if (activeMap.length != 0) {
+        activeMap[activeMap.length-1].classList.remove("active-side-nav")
+        activeMap.pop()
+    }
+    recentMap.classList.add("active-side-nav")
+    activeMap.push(recentMap)
+}
+
+function setChar(source, character) {
+    setActiveChar(character)
+    background.src = source.background
+    characterBg.src = source.photo
+    charName.innerText = source.name
+    details.innerText =  source.story
+}
+
+function charEvent() {
+    displayedChar.forEach(char => {
+        char.addEventListener("click", (e)=>{
+            setChar(displayedCharSource[displayedChar.indexOf(char)], char)
+        })
+    });
+}
+
+function filterDisplayChar(mapName) {
+    while (displayedCharSource.length != 0) {
+        displayedCharSource.pop()
+        displayedChar.pop()
+    }
+    characters.forEach(char => {
+        if (char.map == mapName) {
+            displayedCharSource.push(char)
+        }
+    });
+}
+
+function makeCharacters() {
+    while(charList.firstChild) {
+        charList.removeChild(charList.lastChild)
+    }
+    for (let i = 0; i < displayedCharSource.length; i++) {
+        const character = document.createElement("div")
+        character.classList.add("character")
+        const image = document.createElement("img")
+        image.src = displayedCharSource[i].avatar
+        const name = document.createElement("h3")
+        name.innerText = displayedCharSource[i].name
+    
+        if (i == 0) {
+            setChar(displayedCharSource[i], character)
+        }
+    
+        character.appendChild(image)
+        character.appendChild(name)
+        charList.appendChild(character)
+        displayedChar.push(character)
+    }
+    charEvent()
+}
+
+// initialize page
+for (let i = 0; i < maps.length; i++) {
+    if (maps[i].innerText.toLowerCase() == choosedMap) {
+        filterDisplayChar(maps[i].innerText.toLowerCase())
+        makeCharacters()
+        setRecentMap(maps[i])
+    }
+    maps[i].addEventListener("click", (e)=>{
+        filterDisplayChar(maps[i].innerText.toLowerCase())
+        makeCharacters()
+        setRecentMap(maps[i])
+    })
+}
+
+if (activeMap.length == 0) {
+    filterDisplayChar(maps[0].innerText.toLowerCase())
+    makeCharacters()
+    setRecentMap(maps[0])
+}
+
+deleteCookie("choosedMap")
