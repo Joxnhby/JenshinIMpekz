@@ -1,8 +1,19 @@
 const users = [
     {
-        name: "Hans Christian",
-        username: "Jox",
+        name: "Hans",
         email: "jox@gmail.com",
+        age: 18,
+        password: "12345678"
+    },
+    {
+        name: "Joakim Saroin",
+        email: "saroo@gmail.com",
+        age: 18,
+        password: "12345678"
+    },
+    {
+        name: "Acong",
+        email: "acg@gmail.com",
         age: 18,
         password: "12345678"
     }
@@ -60,6 +71,8 @@ function validate(e) {
         return
     }
 
+    const found = false
+
     users.forEach(user => {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
@@ -67,12 +80,14 @@ function validate(e) {
             setCookie("firstName", firstName[0])
             console.log(document.cookie)
             window.location.href = "/"
-            return
+            found = true
         }
     })
 
-    setError("Email or password is invalid", password.parentElement)
-    setError("Email or password is invalid", email.parentElement)
+    if (!found) {
+        setError("Email or password is invalid", password.parentElement)
+        setError("Email or password is invalid", email.parentElement)
+    }   
 }
 
 btn.addEventListener("click", (e)=>{
