@@ -170,7 +170,6 @@ var charList = document.getElementById("characters-list")
 var count = 0
 const activeChar = []
 const activeMap = []
-// const takeMap = 
 
 function clearLastActiveChar() {
     activeChar[activeChar.length-1].classList.remove("active-character")
