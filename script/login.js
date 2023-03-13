@@ -1,8 +1,19 @@
 const users = [
     {
-        name: "Hans Christian",
-        username: "Jox",
+        name: "Hans",
         email: "jox@gmail.com",
+        age: 18,
+        password: "12345678"
+    },
+    {
+        name: "Joakim Saroin",
+        email: "saroo@gmail.com",
+        age: 18,
+        password: "12345678"
+    },
+    {
+        name: "Acong",
+        email: "acg@gmail.com",
         age: 18,
         password: "12345678"
     }
@@ -60,16 +71,23 @@ function validate(e) {
         return
     }
 
+    const found = false
+
     users.forEach(user => {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
-            window.location.href = "/index.html"
-            return
+            const firstName = user.name.split(" ")
+            setCookie("firstName", firstName[0])
+            console.log(document.cookie)
+            window.location.href = "/"
+            found = true
         }
     })
 
-    setError("Email or password is invalid", password.parentElement)
-    setError("Email or password is invalid", email.parentElement)
+    if (!found) {
+        setError("Email or password is invalid", password.parentElement)
+        setError("Email or password is invalid", email.parentElement)
+    }   
 }
 
 btn.addEventListener("click", (e)=>{
@@ -85,3 +103,10 @@ email.addEventListener("keypress", (e)=>{
         validate(e)
     }
 })
+
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
+    let expired = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value};${expired};path=/`
+}
