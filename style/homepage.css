@@ -203,6 +203,8 @@
     }
     
     .news-material {
+        width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
         padding: 40px;

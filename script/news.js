@@ -5,6 +5,11 @@ const news = [
         url: "https://youtu.be/URDSFmZOX4Q"
     },
     {
+        name: "news 5",
+        image: "./assets/homepage/news/news-recent-5.webp",
+        url: "https://youtu.be/BtEh1Aa0yn4"
+    },
+    {
         name: "news 2",
         image: "./assets/homepage/news/news-recent-2.jpg",
         url: "https://youtu.be/AKDz1h2871E"
@@ -13,7 +18,7 @@ const news = [
         name: "news 3",
         image: "./assets/homepage/news/news-recent-3.jpg",
         url: "https://youtu.be/HVXAKOsr2to"
-    },
+    }
 ]
 
 const nextBtn = document.getElementById("news-next-btn")
