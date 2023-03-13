@@ -179,6 +179,16 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
     
     .news-container .slider-image .button-container {
@@ -442,8 +452,18 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        animation: fadeIn 0.3s;
     }
     
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     .button-container {
         width: 95%;
         position: absolute;
