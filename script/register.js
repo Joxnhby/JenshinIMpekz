@@ -11,6 +11,7 @@ let emailVal = email.value
 let ageVal = age.value
 let passwordVal = password.value
 let agreeVal = agree.checked
+let showVal = show.checked
 const errorHistoryElement = []
 const errorHistoryParent = []
 
@@ -107,7 +108,8 @@ agree.addEventListener("keypress", (e)=>{
     }
 })
 show.addEventListener("click", (e)=>{
-    if (password.type == "password") {
+    showVal = show.checked
+    if (showVal == true) {
         password.type = "text"
     } else {
         password.type = "password"

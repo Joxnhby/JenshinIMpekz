@@ -23,9 +23,11 @@ const email = document.getElementById("email")
 const password = document.getElementById("password")
 const loggedusername = document.getElementById("logged-username")
 const btn = document.getElementById("btn")
+const show = document.getElementById("show-pwd")
 
 let emailVal = email.value
 let passwordVal = password.value
+let showVal = show.checked
 const errorHistoryElement = []
 const errorHistoryParent = []
 
@@ -101,6 +103,14 @@ password.addEventListener("keypress", (e)=>{
 email.addEventListener("keypress", (e)=>{
     if (e.key === "Enter") {
         validate(e)
+    }
+})
+show.addEventListener("click", (e)=>{
+    showVal = show.checked
+    if (showVal == true) {
+        password.type = "text"
+    } else {
+        password.type = "password"
     }
 })
 

@@ -135,7 +135,7 @@
         color: var(--medium-blue);
     }
     
-    .field input {
+    .field .user-input {
         width: calc(100% - 40px);
         padding: 15px 20px;
         border-radius: 3px;
@@ -145,8 +145,19 @@
         color: rgb(50, 50, 50);
     }
     
-    .field input:focus {
+    .field .user-input:focus {
         border: 1px solid var(--inazuma-purple);
+    }
+
+    .show-pwd {
+        display: flex;
+        text-align: left;
+    }
+
+    .show-pwd-text {
+        font-family: tahoma;
+        font-size: 16px;
+        color: rgb(50, 50, 50);
     }
     
     .others {
@@ -167,7 +178,7 @@
         color: var(--medium-blue);
     }
     
-    .error input {
+    .error .user-input {
         border: 2px solid var(--fire-red);
     }
     
@@ -179,6 +190,11 @@
         font-style: italic;
     }
 
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
 }
 
 
@@ -322,7 +338,7 @@
         color: var(--medium-blue);
     }
     
-    .field input {
+    .field .user-input {
         width: calc(100% - 30px);
         padding: 12px 15px;
         border-radius: 3px;
@@ -332,10 +348,21 @@
         color: rgb(50, 50, 50);
     }
     
-    .field input:focus {
+    .field .user-input:focus {
         border: 1px solid var(--inazuma-purple);
     }
     
+    .show-pwd {
+        display: flex;
+        text-align: left;
+    }
+
+    .show-pwd-text {
+        font-family: tahoma;
+        font-size: 14px;
+        color: rgb(50, 50, 50);
+    }
+
     .others {
         display: flex;
         justify-content: space-between;
@@ -354,7 +381,7 @@
         color: var(--medium-blue);
     }
     
-    .error input {
+    .error .user-input {
         border: 2px solid var(--fire-red);
     }
     
@@ -366,4 +393,9 @@
         font-style: italic;
     }
 
+    .checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    }
 }
