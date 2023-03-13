@@ -219,7 +219,7 @@ function setRecentMap(recentMap) {
         activeMap.pop()
     }
     recentMap.classList.add("active-side-nav")
-    activeMap.push(recentMap)a
+    activeMap.push(recentMap)
 }
 
 function setChar(source, character) {
