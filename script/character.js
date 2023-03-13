@@ -271,5 +271,16 @@ for(let i = 0; i < map.length; i++){
     })
 }
 
+function getCookie(name) {
+    const cookies = decodeURIComponent(document.cookie)
+    const cArray = cookies.split("; ")
+    let result = null
 
+    cArray.forEach(element => {
+        if (element.indexOf(name) == 0) {
+            result = element.substring(name.length + 1)
+        }
+    });
+    return result
+}
 
