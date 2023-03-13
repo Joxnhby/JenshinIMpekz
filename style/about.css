@@ -1,6 +1,6 @@
 @media screen and (min-width: 1000px) {
     body{
-        background-image: url(/assets/homepage/home-page-background.webp);
+        background-image: url(../assets/homepage/home-page-background.webp);
     }
     
     .top-photo {
@@ -126,7 +126,7 @@
 
 @media screen and (max-width: 1000px) {
     body{
-        background-image: url(/assets/homepage/home-page-background.webp);
+        background-image: url(../assets/homepage/home-page-background.webp);
     }
     
     .about {

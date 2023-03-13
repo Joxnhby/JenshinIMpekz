@@ -1,7 +1,7 @@
 @media screen and (min-width: 1000px) {
     body{
         background-attachment: scroll;
-        background-image: url(/Assets/homepage/home-page-background.webp);
+        background-image: url(../assets/homepage/home-page-background.webp);
         margin-top: 75px;
     }
     
@@ -258,7 +258,7 @@
 @media screen and (max-width: 1000px) {
     body{
         background-attachment: scroll;
-        background-image: url(/Assets/homepage/home-page-background.webp);
+        background-image: url(../assets/homepage/home-page-background.webp);
     }
     
     .top-photo{

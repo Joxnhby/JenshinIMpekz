@@ -79,7 +79,7 @@ function validate(e) {
             const firstName = user.name.split(" ")
             setCookie("firstName", firstName[0])
             console.log(document.cookie)
-            window.location.href = "/"
+            window.location.href = "./index.html"
             found = true
         }
     })

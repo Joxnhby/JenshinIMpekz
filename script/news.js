@@ -1,17 +1,17 @@
 const news = [
     {
         name: "news 1",
-        image: "/assets/homepage/news/news-recent-1.jpg",
+        image: "./assets/homepage/news/news-recent-1.jpg",
         url: "https://youtu.be/URDSFmZOX4Q"
     },
     {
         name: "news 2",
-        image: "/assets/homepage/news/news-recent-2.jpg",
+        image: "./assets/homepage/news/news-recent-2.jpg",
         url: "https://youtu.be/AKDz1h2871E"
     },
     {
         name: "news 3",
-        image: "/assets/homepage/news/news-recent-3.jpg",
+        image: "./assets/homepage/news/news-recent-3.jpg",
         url: "https://youtu.be/HVXAKOsr2to"
     },
 ]

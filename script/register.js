@@ -73,7 +73,7 @@ function validate(e) {
     }
 
     if (errorHistoryParent.length == 0) {
-        window.location.href = "/login.html"
+        window.location.href = "./login.html"
     }
 }
 

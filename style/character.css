@@ -88,7 +88,7 @@
         padding: 10px 15px;
         overflow-y: scroll;
         width: 60%;
-        max-height: 50%;
+        max-height: 20%;
         transform: translateX(-40%);
         scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
         display: flex;
@@ -167,8 +167,8 @@
     .character-section .side-nav {
         position: absolute;
         width: 100%;
+        margin-top: -300px;
         float: left;
-        top: 0%;
     }
     
     .character-section .side-nav p {

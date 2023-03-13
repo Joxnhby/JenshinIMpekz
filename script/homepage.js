@@ -1,0 +1,1 @@
+const takeregion = localStorage.getItem()

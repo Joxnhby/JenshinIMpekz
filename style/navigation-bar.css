@@ -1,23 +1,23 @@
 @font-face {
     font-family: hy-wen-hei;
-    src: url(/assets/font/hy-wen-hei.ttf);
+    src: url(../assets/font/hy-wen-hei.ttf);
 }
 
 @font-face {
     font-family: tahoma;
-    src: url(/assets/font/tahoma-regular.ttf);
+    src: url(../assets/font/tahoma-regular.ttf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: tahoma;
-    src: url(/assets/font/tahoma-bold.ttf);
+    src: url(../assets/font/tahoma-bold.ttf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: oxalis;
-    src: url(/assets/font/oxalis-std-bold.otf);
+    src: url(../assets/font/oxalis-std-bold.otf);
     font-weight: normal;
 }
 
