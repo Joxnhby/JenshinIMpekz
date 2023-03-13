@@ -4,6 +4,7 @@ const age = document.getElementById("age")
 const password = document.getElementById("password")
 const agree = document.getElementById("agree")
 const btn = document.getElementById("btn")
+const show = document.getElementById("show-pwd")
 
 let fullnameVal = fullname.value
 let emailVal = email.value
@@ -103,5 +104,12 @@ password.addEventListener("keypress", (e)=>{
 agree.addEventListener("keypress", (e)=>{
     if (e.key === "Enter") {
         validate(e)
+    }
+})
+show.addEventListener("click", (e)=>{
+    if (password.type == "password") {
+        password.type = "text"
+    } else {
+        password.type = "password"
     }
 })

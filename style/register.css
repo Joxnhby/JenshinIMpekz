@@ -176,6 +176,18 @@
         font-style: italic;
     }
     
+    .show-pwd {
+        display: flex;
+        text-align: left;
+        margin-bottom: -5px;
+    }
+
+    .show-pwd-text {
+        font-family: tahoma;
+        font-size: 16px;
+        color: rgb(50, 50, 50);
+    }
+
     .terms {
         display: flex;
         text-align: left;
@@ -374,6 +386,18 @@
         font-style: italic;
     }
     
+    .show-pwd {
+        display: flex;
+        text-align: left;
+        margin-bottom: -5px;
+    }
+
+    .show-pwd-text {
+        font-family: tahoma;
+        font-size: 14px;
+        color: rgb(50, 50, 50);
+    }
+
     .terms {
         display: flex;
         text-align: left;
