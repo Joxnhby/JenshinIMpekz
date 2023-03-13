@@ -528,15 +528,13 @@
         position: absolute;
         top: 10%;
         left: 50%;
-        transform: translateX(-60%);
-        text-align: center;
-    
+        transform: translateX(-40%);
+        text-align: left;
     }
     
     .character-section .character-background .content .details hr {
         border: 2px solid var(--light-yellow);
         width: 100px;
-        transform: translateX(215%);
     }
     
     .character-section .character-background .content .details h2 {
@@ -558,7 +556,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(40%);
     }
     
     .character-section .character-background .content .details .contain p {
