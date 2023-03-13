@@ -179,7 +179,6 @@
     .show-pwd {
         display: flex;
         text-align: left;
-        margin-bottom: -5px;
     }
 
     .show-pwd-text {
@@ -389,7 +388,6 @@
     .show-pwd {
         display: flex;
         text-align: left;
-        margin-bottom: -5px;
     }
 
     .show-pwd-text {
