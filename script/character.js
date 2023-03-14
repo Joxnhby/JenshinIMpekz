@@ -163,8 +163,7 @@ const characters = [
 
 const background = document.getElementById("scenery-bg")
 const characterBg = document.getElementById("char-bg")
-const charName = document.getElementById("char-name")
-const details = document.getElementById("char-details")
+const content = document.getElementById("content")
 const maps = document.getElementsByClassName("map")
 let charList = document.getElementById("characters-list")
 let count = 0
@@ -225,9 +224,28 @@ function setRecentMap(recentMap) {
 function setChar(source, character) {
     setActiveChar(character)
     background.src = source.background
-    characterBg.src = source.photo
+    while (characterBg.firstChild) {
+        characterBg.removeChild(characterBg.lastChild)
+    }
+    content.lastElementChild.remove()
+    const charImg = document.createElement("img")
+    charImg.src = source.photo
+    characterBg.appendChild(charImg)
+
+    const details = document.createElement("div")
+    details.classList.add("details")
+    const line = document.createElement("hr")
+    const charName = document.createElement("h2")
     charName.innerText = source.name
-    details.innerText =  source.story
+    const contain = document.createElement("div")
+    contain.classList.add("contain")
+    const story = document.createElement("p")
+    story.innerText = source.story
+    contain.appendChild(story)
+    details.appendChild(line)
+    details.appendChild(charName)
+    details.appendChild(contain)
+    content.appendChild(details)
 }
 
 function charEvent() {
