@@ -1,19 +1,13 @@
 const users = [
     {
-        name: "Hans",
-        email: "jox@gmail.com",
-        age: 18,
+        name: "Hans Christian Arinardi",
+        email: "hans@gmail.com",
+        age: 19,
         password: "12345678"
     },
     {
-        name: "Joakim Saroin",
-        email: "saroo@gmail.com",
-        age: 18,
-        password: "12345678"
-    },
-    {
-        name: "Acong",
-        email: "acg@gmail.com",
+        name: "Jacky",
+        email: "jacky@gmail.com",
         age: 18,
         password: "12345678"
     }
@@ -73,7 +67,7 @@ function validate(e) {
         return
     }
 
-    const found = false
+    let found = false
 
     users.forEach(user => {
         if (user.email == emailVal && user.password == passwordVal) {
@@ -119,4 +113,14 @@ function setCookie(name, value, daysToLive) {
     date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
     let expired = "expires=" + date.toUTCString()
     document.cookie = `${name}=${value};${expired};path=/`
+}
+
+for (let i = 0; i < localStorage.length; i++) {
+    const user = new Object()
+    const str = localStorage.getItem("user" + i).split("#")
+    user.name = str[0]
+    user.email = str[1]
+    user.age = str[2]
+    user.password = str[3]
+    users.push(user)
 }

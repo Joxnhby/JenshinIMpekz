@@ -75,6 +75,14 @@ function validate(e) {
     }
 
     if (errorHistoryParent.length == 0) {
+        const temp = []
+        temp.push(fullnameVal)
+        temp.push(emailVal)
+        temp.push(ageVal)
+        temp.push(passwordVal)
+        const user = temp.join("#")
+        const id = localStorage.length
+        localStorage.setItem("user"+id, user)
         window.location.href = "./login.html"
     }
 }
