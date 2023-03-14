@@ -62,6 +62,8 @@ function validate(e) {
         setError("Email must be @gmail.com", email.parentElement)
     } else if (emailVal.includes(" ")) {
         setError("Email can't contain space!", email.parentElement)
+    } else if (emailVal.includes("~")) {
+        setError("Email can't contain ~", email.parentElement)
     } else {
         for (let i = 0; i < localStorage.length; i++) {
             const temp = localStorage.getItem("jenshinUser" + i)
