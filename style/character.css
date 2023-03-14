@@ -216,7 +216,7 @@
     
     .active-side-nav {
         padding: 20px 0px;
-        background-color: var(--inazuma-purple);
+        background: linear-gradient(90deg, rgba(106, 53, 219, 0), rgba(106, 53, 219, 1), rgba(106, 53, 219, 0));
     }
 
     .active-side-nav{
