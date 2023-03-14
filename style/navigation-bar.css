@@ -15,12 +15,6 @@
     font-weight: bold;
 }
 
-@font-face {
-    font-family: oxalis;
-    src: url(../assets/font/oxalis-std-bold.otf);
-    font-weight: normal;
-}
-
 :root {
     --white: #ffffff;
     --deep-blue: #112436;
