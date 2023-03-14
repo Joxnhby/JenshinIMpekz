@@ -60,13 +60,17 @@ function validate(e) {
 
     if (!emailVal.endsWith("@gmail.com") || emailVal.length < 11) {
         setError("Email must be @gmail.com", email.parentElement)
+    } else if (emailVal.includes(" ")) {
+        setError("Email can't contain space!", email.parentElement)
     }
 
     if (ageVal < 18) {
         setError("Minimum age is 18!", age.parentElement)
     }
 
-    if (passwordVal.length < 8) {
+    if (passwordVal.includes(" ")) {
+        setError("Password can't contain space!", password.parentElement)
+    } else if (passwordVal.length < 8) {
         setError("Password at least 8 characters!", password.parentElement)
     }
 
