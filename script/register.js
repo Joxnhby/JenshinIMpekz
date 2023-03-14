@@ -82,7 +82,7 @@ function validate(e) {
         temp.push(passwordVal)
         const user = temp.join("~")
         const id = localStorage.length
-        localStorage.setItem("user"+id, user)
+        localStorage.setItem("jenshinUser"+id, user)
         window.location.href = "./login.html"
     }
 }

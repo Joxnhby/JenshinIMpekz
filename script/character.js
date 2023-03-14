@@ -171,7 +171,7 @@ const activeChar = []
 const displayedCharSource = []
 const displayedChar = []
 const activeMap = []
-const choosedMap = localStorage.getItem("selectedMap")
+const choosedMap = localStorage.getItem("jenshinSelectedMap")
 
 function clearLastActiveChar() {
     if (activeChar.length != 0) {
@@ -288,4 +288,4 @@ if (activeMap.length == 0) {
     setRecentMap(maps[0])
 }
 
-localStorage.removeItem("selectedMap")
+localStorage.removeItem("jenshinSelectedMap")

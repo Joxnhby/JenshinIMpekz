@@ -18,7 +18,7 @@ const loginBtn = document.getElementById("user-profile-non")
 const logoutBtn = document.getElementById("log-out-btn")
 const account = document.getElementById("user-profile-logged")
 const username = document.getElementById("logged-username")
-const firstName = localStorage.getItem("firstName")
+const firstName = localStorage.getItem("jenshinFirstName")
 
 if (firstName != null) {
     loginBtn.style.display = "none";

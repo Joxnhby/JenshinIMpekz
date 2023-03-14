@@ -73,7 +73,7 @@ function validate(e) {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
             const firstName = user.name.split(" ")
-            localStorage.setItem("firstName", firstName[0])
+            localStorage.setItem("jenshinFirstName", firstName[0])
             window.location.href = "./index.html"
             found = true
         }
@@ -109,7 +109,7 @@ show.addEventListener("click", (e)=>{
 
 for (let i = 0; i < localStorage.length; i++) {
     const user = new Object()
-    const str = localStorage.getItem("user" + i).split("~")
+    const str = localStorage.getItem("jenshinUser" + i).split("~")
     user.name = str[0]
     user.email = str[1]
     user.age = str[2]
