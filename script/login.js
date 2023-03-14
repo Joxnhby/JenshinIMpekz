@@ -73,8 +73,7 @@ function validate(e) {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
             const firstName = user.name.split(" ")
-            setCookie("firstName", firstName[0])
-            console.log(document.cookie)
+            localStorage.setItem("firstName", firstName[0])
             window.location.href = "./index.html"
             found = true
         }
@@ -108,16 +107,9 @@ show.addEventListener("click", (e)=>{
     }
 })
 
-function setCookie(name, value, daysToLive) {
-    const date = new Date()
-    date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
-    let expired = "expires=" + date.toUTCString()
-    document.cookie = `${name}=${value};${expired};path=/`
-}
-
 for (let i = 0; i < localStorage.length; i++) {
     const user = new Object()
-    const str = localStorage.getItem("user" + i).split("#")
+    const str = localStorage.getItem("user" + i).split("~")
     user.name = str[0]
     user.email = str[1]
     user.age = str[2]

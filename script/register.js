@@ -80,7 +80,7 @@ function validate(e) {
         temp.push(emailVal)
         temp.push(ageVal)
         temp.push(passwordVal)
-        const user = temp.join("#")
+        const user = temp.join("~")
         const id = localStorage.length
         localStorage.setItem("user"+id, user)
         window.location.href = "./login.html"

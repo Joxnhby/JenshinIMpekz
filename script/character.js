@@ -171,31 +171,7 @@ const activeChar = []
 const displayedCharSource = []
 const displayedChar = []
 const activeMap = []
-const choosedMap = getCookie("choosedMap")
-
-function setCookie(name, value, daysToLive) {
-    const date = new Date()
-    date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000)
-    let expired = "expires=" + date.toUTCString()
-    document.cookie = `${name}=${value};${expired};path=/`
-}
-
-function deleteCookie(name) {
-    setCookie(name, null, null)
-}
-
-function getCookie(name) {
-    const cookies = decodeURIComponent(document.cookie)
-    const cArray = cookies.split("; ")
-    let result = null
-
-    cArray.forEach(element => {
-        if (element.indexOf(name) == 0) {
-            result = element.substring(name.length + 1)
-        }
-    });
-    return result
-}
+const choosedMap = localStorage.getItem("selectedMap")
 
 function clearLastActiveChar() {
     if (activeChar.length != 0) {
@@ -312,4 +288,4 @@ if (activeMap.length == 0) {
     setRecentMap(maps[0])
 }
 
-deleteCookie("choosedMap")
+localStorage.removeItem("selectedMap")
