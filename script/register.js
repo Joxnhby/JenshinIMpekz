@@ -62,6 +62,14 @@ function validate(e) {
         setError("Email must be @gmail.com", email.parentElement)
     } else if (emailVal.includes(" ")) {
         setError("Email can't contain space!", email.parentElement)
+    } else {
+        for (let i = 0; i < localStorage.length; i++) {
+            const temp = localStorage.getItem("jenshinUser" + i)
+            const arr = temp.split("~")
+            if (arr[1] == emailVal) {
+                setError("Email already exist", email.parentElement)
+            }
+        }
     }
 
     if (ageVal < 18) {
@@ -72,6 +80,8 @@ function validate(e) {
         setError("Password can't contain space!", password.parentElement)
     } else if (passwordVal.length < 8) {
         setError("Password at least 8 characters!", password.parentElement)
+    } else if (passwordVal.includes("~")) {
+        setError("Password can't contain ~", password.parentElement)
     }
 
     if (!agreeVal) {
