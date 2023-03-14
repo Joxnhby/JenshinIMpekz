@@ -27,7 +27,7 @@ if (firstName != null) {
 }
 
 logoutBtn.addEventListener("click", (e)=>{
-    localStorage.removeItem("firstName")
+    localStorage.removeItem("jenshinFirstName")
     loginBtn.style.display = "block";
     username.parentElement.parentElement.style.display = "none"
 })
