@@ -1,30 +1,26 @@
-@media screen and (max-width: 500px) {
-    body {
-        margin-top: 60px;
-    }
-
+@media screen and (max-width: 650px) {
     .character-section {
         width: 100%;
-        height: calc(100vh - 75px);
+        height: 100vh;
         position: relative;
-        overflow: hidden;
     }
     
     .character-section .character-background {
         width: 100%;
         height: 100vh;
         position: relative;
-    }
-
-    .character-section .character-background img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
+        overflow: hidden;
     }
     
     .scenery-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
         filter: blur(5px);
         transform: scale(1.2);
+        object-fit: cover;
     
         animation-name: zoom-in-and-out;
         animation-duration: 8s;
@@ -46,304 +42,51 @@
     
     .character-section .character-background .content{
         width: 100%;
-        height: 50%;
-        position: absolute;
-        top: 22%;
-        overflow: hidden;
-    }
-    
-    .character-section .character-background .content img {
-        width:100%;
         height: 100%;
-        transform: translate(70px, 30px);
-        object-fit: contain;
-
-        animation: left-in-char 0.3s;
-    }
-
-    @keyframes left-in-char {
-        0% {
-            transform: translate(120px, 30px);
-        }
-        
-        100% {
-            transform: translateX(70px, 30px);
-        }
-    }
-    
-    .character-section .character-background .content .details {
-        width: 50%;
         position: absolute;
-        top: -7%;
-        text-align: center;
-        transform: translateX(50%);
-    
-        animation: left-in-details 0.3s;
-    }
-
-    @keyframes left-in-details {
-        0% {
-            transform: translateX(20%);
-        }
-        
-        100% {
-            transform: translateX(50%);
-        }
-    }
-    
-    .character-section .character-background .content .details hr {
-        border: 2px solid var(--light-yellow);
-        width: 100px;
-        transform: translateY(100px);
-        margin-left: 30%;
-    }
-    
-    .character-section .character-background .content .details h2 {
-        font-family: hy-wen-hei;
-        font-size: 25px;
-        color: var(--white);
-        margin: 50px 0px 40px 0px;
-        text-shadow: 3px 3px 0px var(--deep-blue);
-    }
-    
-    .character-section .character-background .content .details .contain {
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 10px 15px;
-        overflow-y: scroll;
-        width: 60%;
-        max-height: 20%;
-        transform: translateX(-40%);
-        scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .character-section .character-background .content .details .contain p {
-        text-align: left;
-        font-family: tahoma;
-        font-size: 12px;
-        line-height: 18px;
-        color: var(--white);
-    }
-    
-    .character-section .characters-list {
-        width: 100%;
-        max-height: 22%;
-        height: max-content;
-        min-height: 15%;
-        position: absolute;
-        bottom: 0px;
-        background-color: rgba(255, 255, 255, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .character-section .characters-list .character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 30px;
-        min-height: 30px;
-        border: 2px solid rgba(0, 0, 0, 0);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        margin: 0px 5px;
-        cursor: pointer;
-    }
-    
-    .character-section .characters-list .character:hover {
-        border: 2px solid var(--white);
-    }
-    
-    .character-section .characters-list .character:hover h3 {
-        background-color: var(--white);
-        color: var(--medium-blue);
-    }
-    
-    .character-section .characters-list .character img {
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    
-    .character-section .characters-list .character h3 {
-        font-family: tahoma;
-        color: var(--white);
-        text-align: center;
-        font-size: 70%;
-        
-        font-style: normal;
-        font-weight: normal;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--deep-blue);
-    } */
-    
-    .character-section .side-nav {
-        position: absolute;
-        width: 100%;
-        margin-top: -300px;
-        float: left;
-    }
-    
-    .character-section .side-nav p {
-        float: left;
-        width: 40%;
-        text-align: center;
-        font-family: hy-wen-hei;
-        padding: 15px 10px;
-        color: var(--white);
-        transition: 0.3s all ease-in-out;
-        text-shadow: 1px 1px 0px var(--deep-blue);
-    }
-    
-    .character-section .side-nav p:hover {
-        padding: 15px 10px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-    }
-    
-    .active-side-nav {
-        padding: 15px 10px;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    }
-    
-    .active-character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 30px;
-        min-height: 30px;
-        border: 2px solid var(--white);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        margin: 0px 5px;
-        cursor: pointer;
-    }
-    
-    .active-character img{
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    
-    .character-section .characters-list .active-character h3 {
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: tahoma;
-        font-weight: normal;
-        color: var(--deep-blue);
-        text-align: center;
-        font-size: 70%;
-        font-style: normal;
-        background-color: var(--white);
-    }
-}
-
-@media screen and (min-width: 501px) and (max-width : 1000px) {
-    body {
-        margin-top: 60px;
-    }
-
-    .character-section {
-        width: 100%;
-        height: calc(100vh - 75px);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .character-section .character-background {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-    }
-
-    .character-section .character-background img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-    
-    .scenery-bg {
-        filter: blur(5px);
-        transform: scale(1.2);
-    
-        animation-name: zoom-in-and-out;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        animation-direction: alternate;
-        animation-play-state: running;
-    }
-    
-    @keyframes zoom-in-and-out{
-        0% {
-            transform: scale(1.2);
-        }
-    
-        100% {
-            transform: scale(1.4);
-        }
-    }
-    
-    .character-section .character-background .content{
-        width: 100%;
-        max-height: 63%;
-        height: 63%;
-        position: absolute;
-        text-align: left;
-        transform: translateY(-146%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .character-section .character-background .content #char-bg img {
-        width: 100%;
-        height: 100%;
-        transform: translateX(100px);
-        object-fit: contain;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        height: 100vh;
+        transform: translateX(-47%);
+        object-fit: cover;
 
         animation: left-in-char 0.3s;
     }
 
     @keyframes left-in-char {
         0% {
-            transform: translateX(170px);
+            transform: translateX(-37%);
         }
         
         100% {
-            transform: translateX(100px);
+            transform: translateX(-47%);
         }
     }
     
     .character-section .character-background .content .details {
         width: 50%;
         position: absolute;
-        top: 10%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-60%);
+        transform: translate(-80%, -60%);
     
         animation: left-in-details 0.3s;
     }
 
     @keyframes left-in-details {
         0% {
-            transform: translateX(-80%);
+            transform: translate(-90%, -60%);
         }
         
         100% {
-            transform: translateX(-60%);
+            transform: translate(-80%, -60%);
         }
     }
     
@@ -358,14 +101,16 @@
         color: var(--white);
         margin: 4% 0px;
         text-shadow: 3px 3px 0px var(--deep-blue);
+        margin-bottom: 20px;
     }
     
     .character-section .character-background .content .details .contain {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
         padding: 15px 25px;
         overflow-y: scroll;
         width: 50%;
-        height: 75%;
+        height: 20vh;
+        max-height: 200px;
         scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
         display: flex;
         justify-content: center;
@@ -382,9 +127,6 @@
     
     .character-section .characters-list {
         width: 100%;
-        /* max-height: 30%;
-        height: max-content;
-        min-height: 20%; */
         height: 150px;
         position: absolute;
         bottom: 0px;
@@ -395,18 +137,14 @@
     }
     
     .character-section .characters-list .character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 50px;
-        min-height: 50px;
+        width: 80px;
+        height: auto;
         border: 2px solid rgba(0, 0, 0, 0);
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         overflow: hidden;
-        margin: 0px 15px;
+        margin: 0px 5px;
         cursor: pointer;
     }
     
@@ -421,7 +159,6 @@
     
     .character-section .characters-list .character img {
         width: 100%;
-        height: 70%;
         object-fit: cover;
         background-color: rgba(0, 0, 0, 0.4);
     }
@@ -433,7 +170,248 @@
         font-size: 14px;
         font-style: normal;
         font-weight: normal;
-        height: 30px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--deep-blue);
+    }
+    
+    .character-section .side-nav {
+        /* position: absolute; */
+        width: 100%;
+        top: 0px;      
+        float: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .character-section .side-nav p {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        font-family: hy-wen-hei;
+        padding: 20px 15px;
+        color: var(--white);
+        transition: 0.3s all ease-in-out;
+        text-shadow: 1px 1px 0px var(--deep-blue);
+    }
+    
+    .character-section .side-nav p:hover {
+        padding: 20px 15%px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    }
+    
+    .active-side-nav {
+        padding: 20px 15%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    }
+    
+    .active-character {
+        width: 80px;
+        height: auto;
+        border: 2px solid var(--white);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 5px;
+        cursor: pointer;
+    }
+    
+    .active-character img{
+        width: 100%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .active-character h3 {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: tahoma;
+        font-weight: normal;
+        color: var(--deep-blue);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        background-color: var(--white);
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width : 1000px) {
+    .character-section {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .character-section .character-background {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .scenery-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        filter: blur(5px);
+        transform: scale(1.2);
+        object-fit: cover;
+    
+        animation-name: zoom-in-and-out;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-play-state: running;
+    }
+    
+    @keyframes zoom-in-and-out{
+        0% {
+            transform: scale(1.2);
+        }
+    
+        100% {
+            transform: scale(1.4);
+        }
+    }
+    
+    .character-section .character-background .content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .character-section .character-background .content #char-bg img {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-45%);
+        object-fit: contain;
+
+        animation: left-in-char 0.3s;
+    }
+
+    @keyframes left-in-char {
+        0% {
+            transform: translateX(-35%);
+        }
+        
+        100% {
+            transform: translateX(-45%);
+        }
+    }
+    
+    .character-section .character-background .content .details {
+        width: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%, -60%);
+    
+        animation: left-in-details 0.3s;
+    }
+
+    @keyframes left-in-details {
+        0% {
+            transform: translate(-90%, -60%);
+        }
+        
+        100% {
+            transform: translate(-70%, -60%);
+        }
+    }
+    
+    .character-section .character-background .content .details hr {
+        border: 2px solid var(--light-yellow);
+        width: 100px;
+    }
+    
+    .character-section .character-background .content .details h2 {
+        font-family: hy-wen-hei;
+        font-size: 36px;
+        color: var(--white);
+        margin: 4% 0px;
+        text-shadow: 3px 3px 0px var(--deep-blue);
+        margin-bottom: 20px;
+    }
+    
+    .character-section .character-background .content .details .contain {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 15px 25px;
+        overflow-y: scroll;
+        width: 50%;
+        max-height: 200px;
+        scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .character-background .content .details .contain p {
+        text-align: left;
+        font-family: tahoma;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--white);
+    }
+    
+    .character-section .characters-list {
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .character-section .characters-list .character {
+        width: 90px;
+        border: 2px solid rgba(0, 0, 0, 0);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0px 10px;
+        cursor: pointer;
+    }
+    
+    .character-section .characters-list .character:hover {
+        border: 2px solid var(--white);
+    }
+    
+    .character-section .characters-list .character:hover h3 {
+        background-color: var(--white);
+        color: var(--medium-blue);
+    }
+    
+    .character-section .characters-list .character img {
+        width: 100%;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .character-section .characters-list .character h3 {
+        font-family: tahoma;
+        color: var(--white);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: normal;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -443,7 +421,7 @@
     .character-section .side-nav {
         position: absolute;
         width: 100%;
-        top: 0%;      
+        top: 60px;      
         float: left;
         display: flex;
         flex-direction: row;
@@ -472,12 +450,7 @@
     }
     
     .active-character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 30px;
-        min-height: 30px;
+        width: 90px;
         border: 2px solid var(--white);
         border-radius: 5px;
         display: flex;
@@ -489,13 +462,12 @@
     
     .active-character img{
         width: 100%;
-        height: 70%;
         object-fit: cover;
         background-color: rgba(0, 0, 0, 0.4);
     }
     
-    .character-section .characters-list .active-character h3 {
-        height: 30px;
+    .active-character h3 {
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -526,16 +498,16 @@
         height: 100vh;
         position: relative;
     }
-
-    .character-section .character-background img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
     
     .scenery-bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
         filter: blur(5px);
         transform: scale(1.2);
+        object-fit: cover;
     
         animation-name: zoom-in-and-out;
         animation-duration: 8s;
@@ -560,24 +532,27 @@
         height: 100%;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .character-section .character-background .content #char-bg img {
-        width: 100%;
+        position: absolute;
         height: 100%;
-        transform: translateX(240px);
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-35%);
         object-fit: contain;
         animation: left-in-char 0.3s;
     }
     
     @keyframes left-in-char {
         0% {
-            transform: translateX(400px);
+            transform: translateX(-25%);
         }
         
         100% {
-            transform: translateX(240px);
+            transform: translateX(-35%);
         }
     }
 
@@ -586,7 +561,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-40%, -100%);
+        transform: translate(-50%, -100%);
 
         animation: left-in-details 0.3s;
     }
@@ -597,7 +572,7 @@
         }
         
         100% {
-            transform: translate(-40%, -100%);
+            transform: translate(-50%, -100%);
         }
     }
     
@@ -619,7 +594,7 @@
         background-color: rgba(0, 0, 0, 0.4);
         padding: 15px 25px;
         overflow-y: scroll;
-        height: 75%;
+        max-height: 180px;
         width: 50%;
         scrollbar-color: rgba(255, 255, 255, 1) rgba(50, 50, 50, 0.3);
         display: flex;
@@ -648,12 +623,7 @@
     }
     
     .character-section .characters-list .character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 50px;
-        min-height: 50px;
+        width: 90px;
         border: 2px solid rgba(0, 0, 0, 0);
         border-radius: 5px;
         display: flex;
@@ -687,7 +657,6 @@
     
     .character-section .characters-list .character img {
         width: 100%;
-        height: 70%;
         object-fit: cover;
         background-color: rgba(0, 0, 0, 0.4);
     }
@@ -699,7 +668,7 @@
         font-size: 14px;
         font-style: normal;
         font-weight: normal;
-        height: 30px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -738,12 +707,7 @@
     }
     
     .active-character {
-        max-width: 90px;
-        width: max-content;
-        max-height: 120px;
-        height: max-content;
-        min-width: 30px;
-        min-height: 30px;
+        width: 90px;
         border: 2px solid var(--white);
         border-radius: 5px;
         display: flex;
@@ -756,13 +720,12 @@
     
     .active-character img{
         width: 100%;
-        height: 70%;
         object-fit: cover;
         background-color: rgba(0, 0, 0, 0.4);
     }
     
     .character-section .characters-list .active-character h3 {
-        height: 30px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
