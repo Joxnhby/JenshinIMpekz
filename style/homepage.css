@@ -23,8 +23,8 @@
     .top-photo .title {
         width: 500px;
         position: absolute;
-        top: 50%;
-        transform: translateY(-120%);
+        top: calc(40vw + 20vh);
+        transform: translateY(-30vw);
         text-align: left;
         margin: 0px 100px;
     }
