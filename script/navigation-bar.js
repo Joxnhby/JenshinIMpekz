@@ -14,11 +14,36 @@ cls.addEventListener("click", (e)=>{
     headerMenu.classList.remove("show")
 })
 
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000))
+    let expire = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value}; ${expire}; path=/`
+}
+
+function getCookie(name) {
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArray = cDecoded.split("; ")
+    let result = null
+
+    for (let i = 0; i < cArray.length; i++) {
+        if (cArray[i].indexOf(name) == 0) {
+            result = cArray[i].substring(name.length + 1)
+            break
+        }
+    }
+    return result
+}
+
+function deleteCookie(name) {
+    setCookie(name, null, null)
+}
+
 const loginBtn = document.getElementById("user-profile-non")
 const logoutBtn = document.getElementById("log-out-btn")
 const account = document.getElementById("user-profile-logged")
 const username = document.getElementById("logged-username")
-const firstName = localStorage.getItem("jenshinFirstName")
+const firstName = getCookie("jenshinFirstName")
 
 if (firstName != null) {
     loginBtn.style.display = "none";
@@ -27,7 +52,7 @@ if (firstName != null) {
 }
 
 logoutBtn.addEventListener("click", (e)=>{
-    localStorage.removeItem("jenshinFirstName")
+    deleteCookie("jenshinFirstName")
     loginBtn.style.display = "block";
     username.parentElement.parentElement.style.display = "none"
 })

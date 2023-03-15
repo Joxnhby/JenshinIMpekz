@@ -171,7 +171,32 @@ const activeChar = []
 const displayedCharSource = []
 const displayedChar = []
 const activeMap = []
-const choosedMap = localStorage.getItem("jenshinSelectedMap")
+const choosedMap = getCookie("jenshinSelectedMap")
+
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000))
+    let expire = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value}; ${expire}; path=/`
+}
+
+function getCookie(name) {
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArray = cDecoded.split("; ")
+    let result = null
+
+    for (let i = 0; i < cArray.length; i++) {
+        if (cArray[i].indexOf(name) == 0) {
+            result = cArray[i].substring(name.length + 1)
+            break
+        }
+    }
+    return result
+}
+
+function deleteCookie(name) {
+    setCookie(name, null, null)
+}
 
 function clearLastActiveChar() {
     if (activeChar.length != 0) {
@@ -288,4 +313,4 @@ if (activeMap.length == 0) {
     setRecentMap(maps[0])
 }
 
-localStorage.removeItem("jenshinSelectedMap")
+deleteCookie("jenshinSelectedMap")

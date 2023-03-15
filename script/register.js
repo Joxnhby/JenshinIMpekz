@@ -15,6 +15,23 @@ let showVal = show.checked
 const errorHistoryElement = []
 const errorHistoryParent = []
 
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000))
+    let expire = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value}; ${expire}; path=/`
+}
+
+function getCookieLength() {
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArray = cDecoded.split("; ")
+    let length = cArray.length
+    if (cArray[0] == "") {
+        length = 0
+    }
+    return length
+}
+
 function setError(errorMsg, parent) {
     let error = document.createElement("p")
     error.classList.add("error-text")
@@ -65,11 +82,14 @@ function validate(e) {
     } else if (emailVal.includes("~")) {
         setError("Email can't contain ~", email.parentElement)
     } else {
-        for (let i = 0; i < localStorage.length; i++) {
-            const temp = localStorage.getItem("jenshinUser" + i)
-            const arr = temp.split("~")
-            if (arr[1] == emailVal) {
-                setError("Email already exist", email.parentElement)
+        for (let i = 0; i < getCookieLength(); i++) {
+            const temp = getCookie("jenshinUser" + i)
+            if (temp != null) {
+                const arr = temp.split("~")
+                if (arr[1] == emailVal) {
+                    setError("Email already exist", email.parentElement)
+                    break
+                }
             }
         }
     }
@@ -97,8 +117,8 @@ function validate(e) {
         temp.push(ageVal)
         temp.push(passwordVal)
         const user = temp.join("~")
-        const id = localStorage.length
-        localStorage.setItem("jenshinUser"+id, user)
+        const id = getCookieLength()
+        setCookie("jenshinUser"+id, user, 1000)
         window.location.href = "./login.html"
     }
 }

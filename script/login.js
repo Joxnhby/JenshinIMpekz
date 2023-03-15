@@ -25,6 +25,42 @@ let showVal = show.checked
 const errorHistoryElement = []
 const errorHistoryParent = []
 
+function setCookie(name, value, daysToLive) {
+    const date = new Date()
+    date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000))
+    let expire = "expires=" + date.toUTCString()
+    document.cookie = `${name}=${value}; ${expire}; path=/`
+}
+
+function getCookie(name) {
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArray = cDecoded.split("; ")
+    let result = null
+
+    for (let i = 0; i < cArray.length; i++) {
+        if (cArray[i].indexOf(name) == 0) {
+            result = cArray[i].substring(name.length + 1)
+            break
+        }
+    }
+    return result
+}
+
+function getCookieLength() {
+    const cDecoded = decodeURIComponent(document.cookie)
+    const cArray = cDecoded.split("; ")
+    let length = cArray.length
+    if (cArray[0] == "") {
+        length = 0
+    }
+    return length
+}
+
+
+function deleteCookie(name) {
+    setCookie(name, null, null)
+}
+
 function setError(errorMsg, parent) {
     let error = document.createElement("p")
     error.classList.add("error-text")
@@ -73,7 +109,7 @@ function validate(e) {
         if (user.email == emailVal && user.password == passwordVal) {
             loggedusername.innerHTML = user.name
             const firstName = user.name.split(" ")
-            localStorage.setItem("jenshinFirstName", firstName[0])
+            setCookie("jenshinFirstName", firstName[0], 1)
             window.location.href = "./index.html"
             found = true
         }
@@ -107,12 +143,15 @@ show.addEventListener("click", (e)=>{
     }
 })
 
-for (let i = 0; i < localStorage.length; i++) {
+for (let i = 0; i < getCookieLength(); i++) {
     const user = new Object()
-    const str = localStorage.getItem("jenshinUser" + i).split("~")
-    user.name = str[0]
-    user.email = str[1]
-    user.age = str[2]
-    user.password = str[3]
-    users.push(user)
+    const temp = getCookie("jenshinUser" + i)
+    if (temp != null) {
+        const str = temp.split("~")
+        user.name = str[0]
+        user.email = str[1]
+        user.age = str[2]
+        user.password = str[3]
+        users.push(user)
+    }
 }
