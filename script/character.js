@@ -177,7 +177,7 @@ function setCookie(name, value, daysToLive) {
     const date = new Date()
     date.setTime(date.getTime() + (daysToLive * 24 * 60 * 60 * 1000))
     let expire = "expires=" + date.toUTCString()
-    document.cookie = `${name}=${value}; ${expire}; path=/; SameSite=None; Secure`
+    document.cookie = `${name}=${value}; ${expire}; path=/; SameSite=Lax`
 }
 
 function getCookie(name) {
