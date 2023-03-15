@@ -79,8 +79,8 @@ function validate(e) {
         setError("Email must be @gmail.com", email.parentElement)
     } else if (emailVal.includes(" ")) {
         setError("Email can't contain space!", email.parentElement)
-    } else if (emailVal.includes("~")) {
-        setError("Email can't contain ~", email.parentElement)
+    } else if (emailVal.includes("~") || emailVal.includes("\"") || emailVal.includes("=")) {
+        setError("Email can't contain ~ or \" or =", email.parentElement)
     } else {
         for (let i = 0; i < getCookieLength(); i++) {
             const temp = getCookie("jenshinUser" + i)
@@ -102,8 +102,8 @@ function validate(e) {
         setError("Password can't contain space!", password.parentElement)
     } else if (passwordVal.length < 8) {
         setError("Password at least 8 characters!", password.parentElement)
-    } else if (passwordVal.includes("~")) {
-        setError("Password can't contain ~", password.parentElement)
+    } else if (passwordVal.includes("~") || passwordVal.includes("\"") || passwordVal.includes("=")) {
+        setError("Password can't contain ~ or \" or =", password.parentElement)
     }
 
     if (!agreeVal) {
