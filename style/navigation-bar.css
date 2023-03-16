@@ -87,7 +87,7 @@
         display: none;
     }
     
-    .header-menu a:hover{
+    .hover:hover{
         color: var(--white);
         background-color: var(--inazuma-purple);
     }
@@ -269,7 +269,7 @@
         transition: 0.3s all ease-in-out;
     }
     
-    .header-menu a:hover{
+    .hover:hover{
         color: var(--white);
         background-color: var(--inazuma-purple);
     }

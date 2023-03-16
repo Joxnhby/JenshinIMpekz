@@ -71,3 +71,13 @@ account.addEventListener("click", (e)=>{
         username.style.color = "var(--deep-blue)"
     }
 })
+
+const windowPath = window.location.pathname
+const navLinks = document.querySelectorAll(".header-menu a")
+navLinks.forEach(link => {
+    if (link.href.includes(windowPath)) {
+        link.style.color = "var(--light-grey)"
+        link.style.cursor = "default"
+        link.classList.remove("hover")
+    }
+});
