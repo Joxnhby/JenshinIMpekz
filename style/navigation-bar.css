@@ -77,7 +77,6 @@
     .header-menu a{
         padding: 27px 30px;
         font-family: hy-wen-hei;
-        color: var(--medium-blue);
         text-decoration: none;
         font-size: 18px;
         transition: 0.3s all ease-in-out;
@@ -85,6 +84,10 @@
 
     .close-icon {
         display: none;
+    }
+
+    .hover {
+        color: var(--medium-blue);
     }
     
     .hover:hover{
@@ -181,6 +184,11 @@
     .hide-menu {
         display: block
     }
+
+    .non-active {
+        color: var(--light-grey);
+        cursor: default;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -262,11 +270,14 @@
         width: 100%;
         padding: 15px 30px;
         font-family: hy-wen-hei;
-        color: var(--medium-blue);
         text-decoration: none;
         text-align: right;
         font-size: 16px;
         transition: 0.3s all ease-in-out;
+    }
+
+    .hover {
+        color: var(--medium-blue);
     }
     
     .hover:hover{
@@ -359,5 +370,10 @@
         transition: 0.3s all ease-in-out;
         cursor: pointer;
         text-align: center;
+    }
+
+    .non-active {
+        color: var(--light-grey);
+        cursor: default;
     }
 }

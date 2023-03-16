@@ -73,11 +73,15 @@ account.addEventListener("click", (e)=>{
 })
 
 const windowPath = window.location.pathname
+const currWindowPath = windowPath.split("/")
 const navLinks = document.querySelectorAll(".header-menu a")
+if (currWindowPath[currWindowPath.length-1] == "") {
+    currWindowPath[currWindowPath.length-1] = "index.html"
+}
 navLinks.forEach(link => {
-    if (link.href.includes(windowPath)) {
-        link.style.color = "var(--light-grey)"
-        link.style.cursor = "default"
+    const currLink = link.href.split("/")
+    if (currLink[currLink.length-1] == currWindowPath[currWindowPath.length-1]) {
+        link.classList.add("non-active")
         link.classList.remove("hover")
     }
 });
