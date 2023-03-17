@@ -274,7 +274,7 @@
         line-height: 24px;
         font-family: tahoma;
         margin: 20px 0px;
-        display: none;
+        /* display: none; */
     }
 
     .map-title{
